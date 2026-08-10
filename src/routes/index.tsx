@@ -4,7 +4,7 @@ import logoAsset from "@/assets/logo.png.asset.json";
 import surrjitAsset from "@/assets/surrjit.png.asset.json";
 import { useServerFn } from "@tanstack/react-start";
 import { registerForCourse } from "@/lib/registrations.functions";
-import { CheckCircle, Users, GraduationCap, ArrowRight, MessageCircle } from "lucide-react";
+import { CheckCircle, Users, GraduationCap, ArrowRight, MessageCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
