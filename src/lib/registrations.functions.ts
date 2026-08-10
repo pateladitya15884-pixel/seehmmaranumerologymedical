@@ -2,7 +2,9 @@ import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
 
-export const registerForCourse = createServerFn({ method: "POST" })
+export const registerForCourse = createServerFn({
+  method: "POST",
+})
   .inputValidator((data) =>
     z
       .object({
