@@ -215,10 +215,10 @@ function Index() {
 
       {/* Stats Bar */}
       <motion.div 
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
         className="bg-primary py-10 text-primary-foreground sm:py-12"
       >
         <div className="container mx-auto grid grid-cols-2 gap-y-10 gap-x-4 px-4 text-center md:grid-cols-4">
