@@ -112,7 +112,7 @@ function Index() {
                 Medical Astrology <br />
                 <span className="text-secondary">Advanced Course</span>
               </h1>
-              <p className="mx-auto max-w-xl text-lg text-muted-foreground lg:mx-0">
+              <p className="mx-auto max-w-xl text-base text-muted-foreground sm:text-lg lg:mx-0">
                 Master the profound connection between celestial bodies and human health. 
                 <span className="block mt-2 font-bold text-primary italic">
                   "THIS IS NOT A WEBINAR. THIS IS THE COMPLETE ADVANCED COURSE."
