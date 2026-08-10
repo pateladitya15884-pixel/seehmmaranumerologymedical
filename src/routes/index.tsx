@@ -77,7 +77,7 @@ function Index() {
   return (
     <div className="min-h-screen bg-background font-sans selection:bg-secondary/30">
       {/* Disclaimer Bar */}
-      <div className="sticky top-0 z-50 bg-primary py-2 text-center text-xs font-bold tracking-wider text-primary-foreground sm:text-sm">
+      <div className="bg-primary py-2.5 text-center text-[10px] font-black uppercase tracking-[0.2em] text-primary-foreground sm:text-xs">
         ⚠️ THIS IS A FULL ADVANCED COURSE — NOT A FREE WEBINAR
       </div>
 
