@@ -4,7 +4,7 @@ import logoAsset from "@/assets/logo.png.asset.json";
 import surrjitAsset from "@/assets/surrjit.png.asset.json";
 import { useServerFn } from "@tanstack/react-start";
 import { registerForCourse } from "@/lib/registrations.functions";
-import { CheckCircle, Users, GraduationCap, ArrowRight, MessageCircle } from "lucide-react";
+import { CheckCircle, Users, GraduationCap, ArrowRight, MessageCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
@@ -100,8 +100,14 @@ function Index() {
           <div className="flex items-center gap-2 sm:gap-4">
             <Button variant="outline" size="sm" className="hidden gap-2 border-primary/20 hover:bg-primary/5 sm:flex" asChild>
               <a href="https://wa.me/918559091319" target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="h-4 w-4" />
-                <span>Support</span>
+                <MessageCircle className="h-4 w-4 text-[#25D366]" />
+                <span>WhatsApp</span>
+              </a>
+            </Button>
+            <Button variant="outline" size="sm" className="hidden gap-2 border-primary/20 hover:bg-primary/5 sm:flex" asChild title="Call Support">
+              <a href="tel:+918559091319">
+                <Phone className="h-4 w-4 text-primary" />
+                <span>Call</span>
               </a>
             </Button>
             <Button size="sm" className="h-9 px-4 text-xs font-bold sm:hidden" asChild>
@@ -439,7 +445,12 @@ function Index() {
                 <h4 className="text-sm font-black uppercase tracking-widest text-secondary">Contact Us</h4>
                 <div className="space-y-2 text-sm opacity-70">
                   <p>Email: seehmmaranumerology@gmail.com</p>
-                  <p>WhatsApp: +91 85590 91319</p>
+                  <p>
+                    WhatsApp: <a href="https://wa.me/918559091319" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors underline decoration-secondary/30 underline-offset-4">+91 85590 91319</a>
+                  </p>
+                  <p>
+                    Call: <a href="tel:+918559091319" className="hover:text-secondary transition-colors underline decoration-secondary/30 underline-offset-4">+91 85590 91319</a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -455,9 +466,14 @@ function Index() {
       </footer>
       
       {/* Sticky Mobile CTA */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 border-t bg-card/80 p-4 backdrop-blur-md md:hidden">
-        <Button className="w-full h-12 font-bold" asChild>
-          <a href="#register">Register for FREE Course</a>
+      <div className="fixed bottom-0 left-0 right-0 z-40 flex items-center gap-2 border-t bg-card/80 p-3 backdrop-blur-md md:hidden">
+        <Button variant="outline" className="h-12 w-12 shrink-0 p-0 rounded-full border-primary/20" asChild title="Call Now">
+          <a href="tel:+918559091319">
+            <Phone className="h-5 w-5 text-primary" />
+          </a>
+        </Button>
+        <Button className="flex-1 h-12 font-bold shadow-lg shadow-primary/10" asChild>
+          <a href="#register">Register for FREE</a>
         </Button>
       </div>
     </div>
