@@ -116,10 +116,10 @@ function Index() {
         <div className="container relative z-10 mx-auto px-4">
           <div className="grid items-start gap-8 lg:gap-12 lg:grid-cols-2 max-w-7xl mx-auto">
             <motion.div 
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
               className="order-2 flex flex-col space-y-6 text-center lg:order-1 lg:text-left"
             >
               <div className="inline-flex self-center rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-bold text-secondary ring-1 ring-inset ring-secondary/20 lg:self-start sm:text-sm">
