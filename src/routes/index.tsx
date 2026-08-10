@@ -258,6 +258,13 @@ function Index() {
                 </div>
               </div>
             </div>
+            <div className="flex justify-center mt-12">
+              <Button size="lg" className="h-14 gap-2 px-10 text-lg font-bold shadow-xl" asChild>
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                  Join The Course Now <ArrowRight className="h-5 w-5" />
+                </a>
+              </Button>
+            </div>
           </motion.div>
         </div>
       </section>
