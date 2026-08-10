@@ -81,7 +81,7 @@ function Index() {
       <header className="border-b bg-card/50 backdrop-blur-md">
         <div className="container mx-auto flex items-center justify-between px-4 py-4">
           <div className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-12 w-12 object-contain" />
+            <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-12 w-12 object-contain bg-white rounded-full p-1 shadow-sm" />
             <span className="hidden text-xl font-bold tracking-tight text-primary sm:block">Seehmmara Numerology</span>
           </div>
           <nav className="hidden items-center gap-8 md:flex">
