@@ -231,12 +231,12 @@ function Index() {
       <section className="bg-muted py-24" id="register">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-xl">
-            <div className="rounded-3xl bg-card p-8 shadow-2xl shadow-primary/10 ring-1 ring-primary/5 sm:p-12">
+            <div className="rounded-3xl bg-card p-6 shadow-2xl shadow-primary/10 ring-1 ring-primary/5 sm:p-10 md:p-12">
               {!isRegistered ? (
-                <div className="space-y-8">
+                <div className="space-y-6 sm:space-y-8">
                   <div className="text-center space-y-2">
-                    <h2 className="text-3xl font-black text-primary">Reserve Your Free Seat</h2>
-                    <p className="text-muted-foreground">Limited spots available for this batch.</p>
+                    <h2 className="text-2xl font-black text-primary sm:text-3xl">Reserve Your Free Seat</h2>
+                    <p className="text-sm text-muted-foreground sm:text-base">Limited spots available for this batch.</p>
                   </div>
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <Input 
