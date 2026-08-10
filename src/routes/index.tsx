@@ -192,10 +192,10 @@ function Index() {
             </motion.div>
 
             <motion.div 
-              initial={{ opacity: 0, scale: 0.8 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
               className="order-1 relative mx-auto max-w-sm xl:max-w-md lg:order-2"
             >
               <div className="absolute -inset-4 rounded-3xl bg-secondary/10 blur-2xl" />
