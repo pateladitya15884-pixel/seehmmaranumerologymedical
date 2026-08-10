@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import logoAsset from "@/assets/logo.png.asset.json";
+import surrjitAsset from "@/assets/surrjit.png.asset.json";
 
 import { useServerFn } from "@tanstack/react-start";
 import { registerForCourse } from "@/lib/registrations.functions";
@@ -102,13 +103,33 @@ function Index() {
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-8 pb-16 md:pt-24 md:pb-32" id="home">
         <div className="container relative z-10 mx-auto px-4">
-          <div className="flex flex-col items-center gap-8 lg:gap-12 max-w-7xl mx-auto">
+          <div className="flex flex-col items-center gap-8 lg:flex-row lg:gap-12 lg:items-start max-w-7xl mx-auto">
+            {/* Instructor Image for Mobile (Ordered First) and Desktop (Side) */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "0px" }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="relative order-1 lg:order-2 w-full max-w-[300px] lg:max-w-[400px] lg:shrink-0"
+            >
+              <div className="aspect-square overflow-hidden rounded-full border-4 border-secondary/20 shadow-2xl ring-4 ring-primary/5">
+                <img 
+                  src={surrjitAsset.url} 
+                  alt="Surrjit - Medical Astrology Expert" 
+                  className="h-full w-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-primary px-6 py-2 rounded-full shadow-lg border border-secondary/20 whitespace-nowrap">
+                <p className="text-secondary font-black text-xs uppercase tracking-widest">Master Instructor</p>
+              </div>
+            </motion.div>
+
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "0px" }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="flex flex-col space-y-6 text-center"
+              className="flex flex-col space-y-6 text-center lg:text-left order-2 lg:order-1 flex-1"
             >
               <div className="inline-flex self-center rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-bold text-secondary ring-1 ring-inset ring-secondary/20 sm:text-sm">
                 A Complete Advanced Course • 100% FREE
@@ -135,7 +156,7 @@ function Index() {
                 </p>
               </div>
               
-              <div className="flex flex-col items-center gap-4 sm:flex-row justify-center">
+              <div className="flex flex-col items-center gap-4 sm:flex-row justify-center lg:justify-start">
                 <Button size="lg" className="h-12 w-full gap-2 px-8 text-lg font-bold shadow-lg shadow-primary/20 sm:h-14 sm:w-auto" asChild>
                   <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                     Enroll Now <ArrowRight className="h-5 w-5" />
@@ -161,7 +182,7 @@ function Index() {
               </div>
 
               {/* Countdown Timer */}
-              <div className="flex flex-col items-center gap-4 rounded-2xl bg-card p-4 shadow-xl shadow-primary/5 ring-1 ring-primary/5 sm:p-6 mx-auto">
+              <div className="flex flex-col items-center gap-4 rounded-2xl bg-card p-4 shadow-xl shadow-primary/5 ring-1 ring-primary/5 sm:p-6 mx-auto lg:mx-0">
                 <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground sm:text-sm">Registration Closes In</p>
                 <div className="flex gap-4 sm:gap-8">
                   {[
