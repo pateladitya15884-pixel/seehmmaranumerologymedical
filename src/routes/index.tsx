@@ -188,6 +188,7 @@ function Index() {
                     </div>
                   ))}
                 </div>
+              </div>
             </motion.div>
 
             <motion.div 
@@ -206,7 +207,6 @@ function Index() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
                 <p className="absolute bottom-6 left-0 right-0 text-center font-bold text-white text-lg">Surrjit — Instructor</p>
-              </div>
               </div>
             </motion.div>
         </div>
