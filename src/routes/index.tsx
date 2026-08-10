@@ -26,8 +26,10 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const register = useServerFn(registerForCourse);
+  const [isPending, setIsPending] = useState(false);
   const [formData, setFormData] = useState({ name: "", phone: "", email: "", city: "" });
   const [timeLeft, setTimeLeft] = useState({ days: 3, hours: 12, minutes: 45, seconds: 0 });
+
   const [isRegistered, setIsRegistered] = useState(false);
   const [whatsappLink, setWhatsappLink] = useState("");
 
