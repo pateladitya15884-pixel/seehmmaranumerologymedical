@@ -147,8 +147,14 @@ function Index() {
                 </Button>
                 <div className="flex items-center gap-4 text-left">
                   <div className="flex -space-x-2">
-                    {[1, 2, 3].map((i) => (
-                      <div key={i} className="h-8 w-8 rounded-full border-2 border-background bg-muted sm:h-10 sm:w-10" />
+                    {[
+                      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=64&h=64&fit=crop",
+                      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=64&h=64&fit=crop",
+                      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=64&h=64&fit=crop"
+                    ].map((url, i) => (
+                      <div key={i} className="h-8 w-8 rounded-full border-2 border-background bg-muted sm:h-10 sm:w-10 overflow-hidden">
+                        <img src={url} alt="Student" className="h-full w-full object-cover" />
+                      </div>
                     ))}
                   </div>
                   <div className="text-xs sm:text-sm">
