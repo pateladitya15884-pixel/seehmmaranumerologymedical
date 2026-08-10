@@ -374,7 +374,8 @@ function Index() {
               <div className="space-y-4">
                 <h4 className="text-sm font-black uppercase tracking-widest text-secondary">Contact Us</h4>
                 <div className="space-y-2 text-sm opacity-70">
-                  <p>Support: +91 99999 99999</p>
+                  <p>Email: seehmmaranumerology@gmail.com</p>
+                  <p>WhatsApp: +91 85590 91319</p>
                 </div>
               </div>
             </div>
