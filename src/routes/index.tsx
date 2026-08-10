@@ -8,6 +8,8 @@ import { CheckCircle, Users, GraduationCap, ArrowRight, MessageCircle } from "lu
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
+import { motion } from "framer-motion";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -113,7 +115,13 @@ function Index() {
       <section className="relative overflow-hidden pt-8 pb-16 md:pt-24 md:pb-32" id="home">
         <div className="container relative z-10 mx-auto px-4">
           <div className="grid items-start gap-8 lg:gap-12 lg:grid-cols-2 max-w-7xl mx-auto">
-            <div className="order-2 flex flex-col space-y-6 text-center lg:order-1 lg:text-left">
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="order-2 flex flex-col space-y-6 text-center lg:order-1 lg:text-left"
+            >
               <div className="inline-flex self-center rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-bold text-secondary ring-1 ring-inset ring-secondary/20 lg:self-start sm:text-sm">
                 A Complete Advanced Course • 100% FREE
               </div>
@@ -181,9 +189,15 @@ function Index() {
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="order-1 relative mx-auto max-w-sm xl:max-w-md lg:order-2">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="order-1 relative mx-auto max-w-sm xl:max-w-md lg:order-2"
+            >
               <div className="absolute -inset-4 rounded-3xl bg-secondary/10 blur-2xl" />
               <div className="relative overflow-hidden rounded-3xl border-8 border-card shadow-2xl">
                 <img 
@@ -194,13 +208,19 @@ function Index() {
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
                 <p className="absolute bottom-6 left-0 right-0 text-center font-bold text-white text-lg">Surrjit — Instructor</p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Stats Bar */}
-      <div className="bg-primary py-10 text-primary-foreground sm:py-12">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="bg-primary py-10 text-primary-foreground sm:py-12"
+      >
         <div className="container mx-auto grid grid-cols-2 gap-y-10 gap-x-4 px-4 text-center md:grid-cols-4">
           {[
             { label: "Live Classes", value: "20+" },
@@ -214,12 +234,17 @@ function Index() {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
 
       {/* About Course Section */}
       <section className="py-16 md:py-24" id="about">
         <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-4xl space-y-12">
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-4xl space-y-12"
+          >
             <div className="text-center space-y-4">
               <h2 className="text-4xl font-black text-primary sm:text-5xl md:text-6xl">Why This Course?</h2>
               <p className="text-base text-muted-foreground italic sm:text-lg">"Complete Course — No hidden upsells, no sales pitch during class"</p>
@@ -258,14 +283,19 @@ function Index() {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Registration Section */}
       <section className="bg-muted py-24" id="register">
         <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-xl">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-xl"
+          >
             <div className="rounded-3xl bg-card p-6 shadow-2xl shadow-primary/10 ring-1 ring-primary/5 sm:p-10 md:p-12">
               {!isRegistered ? (
                 <div className="space-y-6 sm:space-y-8">
@@ -342,7 +372,7 @@ function Index() {
                 </div>
               )}
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
