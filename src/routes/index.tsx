@@ -180,17 +180,17 @@ function Index() {
       </section>
 
       {/* Stats Bar */}
-      <div className="bg-primary py-8 text-primary-foreground">
-        <div className="container mx-auto grid grid-cols-2 gap-8 px-4 text-center md:grid-cols-4">
+      <div className="bg-primary py-10 text-primary-foreground sm:py-12">
+        <div className="container mx-auto grid grid-cols-2 gap-y-10 gap-x-4 px-4 text-center md:grid-cols-4">
           {[
             { label: "Live Classes", value: "20+" },
             { label: "Expert Hours", value: "50+" },
             { label: "Students", value: "10k+" },
             { label: "Rating", value: "4.9/5" },
           ].map((stat) => (
-            <div key={stat.label}>
-              <p className="text-3xl font-black text-secondary">{stat.value}</p>
-              <p className="text-xs font-bold uppercase tracking-widest opacity-80">{stat.label}</p>
+            <div key={stat.label} className="space-y-1">
+              <p className="text-2xl font-black text-secondary sm:text-3xl md:text-4xl">{stat.value}</p>
+              <p className="text-[10px] font-bold uppercase tracking-widest opacity-80 sm:text-xs">{stat.label}</p>
             </div>
           ))}
         </div>
