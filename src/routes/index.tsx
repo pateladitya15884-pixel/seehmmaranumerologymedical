@@ -78,41 +78,46 @@ function Index() {
       </div>
 
       {/* Header */}
-      <header className="border-b bg-card/50 backdrop-blur-md">
-        <div className="container mx-auto flex items-center justify-between px-4 py-4">
-          <div className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-12 w-12 object-contain bg-white rounded-full p-1 shadow-sm" />
-            <span className="hidden text-xl font-bold tracking-tight text-primary sm:block">Seehmmara Numerology</span>
+      <header className="sticky top-8 z-40 border-b bg-card/80 backdrop-blur-md transition-all duration-300">
+        <div className="container mx-auto flex items-center justify-between px-4 py-3 sm:py-4">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-10 w-10 object-contain bg-white rounded-full p-1 shadow-sm sm:h-12 sm:w-12" />
+            <span className="text-lg font-bold tracking-tight text-primary sm:text-xl">Seehmmara</span>
           </div>
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav className="hidden items-center gap-6 lg:flex xl:gap-8">
             {["Home", "About", "Curriculum", "FAQ"].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`} className="text-sm font-medium transition-colors hover:text-secondary">
                 {item}
               </a>
             ))}
           </nav>
-          <Button variant="outline" className="gap-2 border-primary/20 hover:bg-primary/5" asChild>
-            <a href="https://wa.me/919999999999">
-              <MessageCircle className="h-4 w-4" />
-              <span>Contact Support</span>
-            </a>
-          </Button>
+          <div className="flex items-center gap-2 sm:gap-4">
+            <Button variant="outline" size="sm" className="hidden gap-2 border-primary/20 hover:bg-primary/5 sm:flex" asChild>
+              <a href="https://wa.me/919999999999">
+                <MessageCircle className="h-4 w-4" />
+                <span>Support</span>
+              </a>
+            </Button>
+            <Button size="sm" className="h-9 px-4 text-xs font-bold sm:hidden" asChild>
+              <a href="#register">Enroll</a>
+            </Button>
+          </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-16 pb-24 md:pt-24 md:pb-32" id="home">
+      <section className="relative overflow-hidden pt-8 pb-16 md:pt-24 md:pb-32" id="home">
         <div className="container relative z-10 mx-auto px-4">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div className="space-y-8 text-center lg:text-left">
-              <div className="inline-block rounded-full bg-secondary/10 px-4 py-1.5 text-sm font-bold text-secondary ring-1 ring-inset ring-secondary/20">
+          <div className="grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
+            <div className="flex flex-col space-y-6 text-center lg:text-left">
+              <div className="inline-block self-center rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-bold text-secondary ring-1 ring-inset ring-secondary/20 lg:self-start sm:text-sm">
                 A Complete Advanced Course • 100% FREE
               </div>
-              <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-6xl">
+              <h1 className="text-3xl font-extrabold tracking-tight text-primary sm:text-5xl lg:text-6xl">
                 Medical Astrology <br />
                 <span className="text-secondary">Advanced Course</span>
               </h1>
-              <p className="mx-auto max-w-xl text-lg text-muted-foreground lg:mx-0">
+              <p className="mx-auto max-w-xl text-base text-muted-foreground sm:text-lg lg:mx-0">
                 Master the profound connection between celestial bodies and human health. 
                 <span className="block mt-2 font-bold text-primary italic">
                   "THIS IS NOT A WEBINAR. THIS IS THE COMPLETE ADVANCED COURSE."
@@ -121,7 +126,7 @@ function Index() {
               </p>
               
               <div className="flex flex-col items-center gap-4 sm:flex-row lg:justify-start">
-                <Button size="lg" className="h-14 gap-2 px-8 text-lg font-bold shadow-lg shadow-primary/20" asChild>
+                <Button size="lg" className="h-12 w-full gap-2 px-8 text-lg font-bold shadow-lg shadow-primary/20 sm:h-14 sm:w-auto" asChild>
                   <a href="#register">
                     Enroll Now <ArrowRight className="h-5 w-5" />
                   </a>
@@ -129,19 +134,19 @@ function Index() {
                 <div className="flex items-center gap-4 text-left">
                   <div className="flex -space-x-2">
                     {[1, 2, 3].map((i) => (
-                      <div key={i} className="h-10 w-10 rounded-full border-2 border-background bg-muted" />
+                      <div key={i} className="h-8 w-8 rounded-full border-2 border-background bg-muted sm:h-10 sm:w-10" />
                     ))}
                   </div>
-                  <div className="text-sm">
+                  <div className="text-xs sm:text-sm">
                     <p className="font-bold text-primary">1,200+ Students</p>
-                    <p className="text-muted-foreground">Already enrolled this batch</p>
+                    <p className="text-muted-foreground">Already enrolled</p>
                   </div>
                 </div>
               </div>
 
               {/* Countdown Timer */}
-              <div className="flex flex-col items-center gap-4 rounded-2xl bg-card p-6 shadow-xl shadow-primary/5 ring-1 ring-primary/5 lg:items-start">
-                <p className="text-sm font-bold uppercase tracking-widest text-muted-foreground">Registration Closes In</p>
+              <div className="flex flex-col items-center gap-4 rounded-2xl bg-card p-4 shadow-xl shadow-primary/5 ring-1 ring-primary/5 sm:p-6 lg:items-start">
+                <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground sm:text-sm">Registration Closes In</p>
                 <div className="flex gap-4 sm:gap-8">
                   {[
                     { label: "Days", value: timeLeft.days },
@@ -150,7 +155,7 @@ function Index() {
                     { label: "Secs", value: timeLeft.seconds },
                   ].map((unit) => (
                     <div key={unit.label} className="text-center">
-                      <span className="text-3xl font-black text-primary sm:text-4xl">{String(unit.value).padStart(2, '0')}</span>
+                      <span className="text-2xl font-black text-primary sm:text-3xl md:text-4xl">{String(unit.value).padStart(2, '0')}</span>
                       <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">{unit.label}</p>
                     </div>
                   ))}
@@ -175,34 +180,34 @@ function Index() {
       </section>
 
       {/* Stats Bar */}
-      <div className="bg-primary py-8 text-primary-foreground">
-        <div className="container mx-auto grid grid-cols-2 gap-8 px-4 text-center md:grid-cols-4">
+      <div className="bg-primary py-10 text-primary-foreground sm:py-12">
+        <div className="container mx-auto grid grid-cols-2 gap-y-10 gap-x-4 px-4 text-center md:grid-cols-4">
           {[
             { label: "Live Classes", value: "20+" },
             { label: "Expert Hours", value: "50+" },
             { label: "Students", value: "10k+" },
             { label: "Rating", value: "4.9/5" },
           ].map((stat) => (
-            <div key={stat.label}>
-              <p className="text-3xl font-black text-secondary">{stat.value}</p>
-              <p className="text-xs font-bold uppercase tracking-widest opacity-80">{stat.label}</p>
+            <div key={stat.label} className="space-y-1">
+              <p className="text-2xl font-black text-secondary sm:text-3xl md:text-4xl">{stat.value}</p>
+              <p className="text-[10px] font-bold uppercase tracking-widest opacity-80 sm:text-xs">{stat.label}</p>
             </div>
           ))}
         </div>
       </div>
 
       {/* About Course Section */}
-      <section className="py-24" id="about">
+      <section className="py-16 md:py-24" id="about">
         <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-3xl space-y-12">
+          <div className="mx-auto max-w-4xl space-y-12">
             <div className="text-center space-y-4">
-              <h2 className="text-3xl font-black text-primary sm:text-5xl">Why This Course?</h2>
-              <p className="text-lg text-muted-foreground italic">"Complete Course — No hidden upsells, no sales pitch during class"</p>
+              <h2 className="text-2xl font-black text-primary sm:text-4xl md:text-5xl">Why This Course?</h2>
+              <p className="text-base text-muted-foreground italic sm:text-lg">"Complete Course — No hidden upsells, no sales pitch during class"</p>
             </div>
 
             <div className="grid gap-6 md:grid-cols-2">
-              <div className="space-y-4 rounded-2xl bg-card p-8 shadow-sm ring-1 ring-primary/5">
-                <h3 className="text-xl font-bold text-primary">Advanced Level Curriculum</h3>
+              <div className="space-y-4 rounded-2xl bg-card p-6 shadow-sm ring-1 ring-primary/5 sm:p-8">
+                <h3 className="text-lg font-bold text-primary sm:text-xl">Advanced Level Curriculum</h3>
                 <div className="space-y-3">
                   <Feature>Understanding Body Parts & Planets</Feature>
                   <Feature>Disease Identification in Charts</Feature>
@@ -210,9 +215,9 @@ function Index() {
                   <Feature>Effective Remedial Measures</Feature>
                 </div>
               </div>
-              <div className="space-y-4 rounded-2xl bg-card p-8 shadow-sm ring-1 ring-primary/5 border-l-4 border-secondary">
-                <h3 className="text-xl font-bold text-primary">Instructor: Surrjit</h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">
+              <div className="space-y-4 rounded-2xl bg-card p-6 shadow-sm ring-1 ring-primary/5 border-l-4 border-secondary sm:p-8">
+                <h3 className="text-lg font-bold text-primary sm:text-xl">Instructor: Surrjit</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
                   With years of experience in Numerology and Astrology, Surrjit has mentored thousands of students globally. 
                   His teaching style is practical, research-oriented, and focused on real-world results.
                 </p>
@@ -226,12 +231,12 @@ function Index() {
       <section className="bg-muted py-24" id="register">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-xl">
-            <div className="rounded-3xl bg-card p-8 shadow-2xl shadow-primary/10 ring-1 ring-primary/5 sm:p-12">
+            <div className="rounded-3xl bg-card p-6 shadow-2xl shadow-primary/10 ring-1 ring-primary/5 sm:p-10 md:p-12">
               {!isRegistered ? (
-                <div className="space-y-8">
+                <div className="space-y-6 sm:space-y-8">
                   <div className="text-center space-y-2">
-                    <h2 className="text-3xl font-black text-primary">Reserve Your Free Seat</h2>
-                    <p className="text-muted-foreground">Limited spots available for this batch.</p>
+                    <h2 className="text-2xl font-black text-primary sm:text-3xl">Reserve Your Free Seat</h2>
+                    <p className="text-sm text-muted-foreground sm:text-base">Limited spots available for this batch.</p>
                   </div>
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <Input 
@@ -295,10 +300,10 @@ function Index() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24" id="faq">
+      <section className="py-16 md:py-24" id="faq">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl space-y-12">
-            <h2 className="text-center text-3xl font-black text-primary sm:text-5xl">Frequently Asked Questions</h2>
+            <h2 className="text-center text-2xl font-black text-primary sm:text-4xl md:text-5xl">Frequently Asked Questions</h2>
             <div className="grid gap-4">
               {[
                 { q: "Is this really a full course or just a webinar?", a: "This is a 100% full advanced course. There is no sales pitch, no 'buy the course' at the end, and no hidden upsells. Our goal is to spread quality knowledge." },
@@ -306,8 +311,8 @@ function Index() {
                 { q: "Will I get a certificate?", a: "Yes, students who attend all live classes and complete the assessment will receive a professional certificate from Seehmmara Numerology." },
                 { q: "What is the duration of the course?", a: "The course spans 15+ hours of intensive live learning over multiple sessions." },
               ].map((faq, i) => (
-                <div key={i} className="rounded-2xl bg-card p-6 shadow-sm ring-1 ring-primary/5">
-                  <h3 className="text-lg font-bold text-primary">{faq.q}</h3>
+                <div key={i} className="rounded-2xl bg-card p-5 shadow-sm ring-1 ring-primary/5 sm:p-6">
+                  <h3 className="text-base font-bold text-primary sm:text-lg">{faq.q}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{faq.a}</p>
                 </div>
               ))}
@@ -319,30 +324,34 @@ function Index() {
       {/* Footer */}
       <footer className="bg-primary pt-16 pb-8 text-primary-foreground">
         <div className="container mx-auto px-4">
-          <div className="grid gap-12 border-b border-primary-foreground/10 pb-12 md:grid-cols-3">
+          <div className="grid gap-10 border-b border-primary-foreground/10 pb-12 sm:grid-cols-2 lg:grid-cols-3">
             <div className="space-y-6">
               <div className="flex items-center gap-3">
-                <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-12 w-12 object-contain bg-white rounded-full p-1" />
-                <span className="text-xl font-bold tracking-tight">Seehmmara Numerology</span>
+                <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-10 w-10 object-contain bg-white rounded-full p-1 sm:h-12 sm:w-12" />
+                <span className="text-xl font-bold tracking-tight">Seehmmara</span>
               </div>
-              <p className="text-sm opacity-70">
+              <p className="text-sm leading-relaxed opacity-70">
                 Empowering healers and astrologers through authentic, advanced knowledge in Medical Astrology and Numerology.
               </p>
             </div>
-            <div className="space-y-4">
-              <h4 className="text-sm font-black uppercase tracking-widest text-secondary">Quick Links</h4>
-              <nav className="flex flex-col gap-2 text-sm opacity-70">
-                {["Home", "About", "Curriculum", "FAQ"].map((item) => (
-                  <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-secondary hover:opacity-100 transition-colors">
-                    {item}
-                  </a>
-                ))}
-              </nav>
-            </div>
-            <div className="space-y-4">
-              <h4 className="text-sm font-black uppercase tracking-widest text-secondary">Contact Us</h4>
-              <p className="text-sm opacity-70">Email: info@seehmmara.com</p>
-              <p className="text-sm opacity-70">Support: +91 99999 99999</p>
+            <div className="grid grid-cols-2 gap-8 sm:col-span-1 lg:col-span-2 lg:grid-cols-2">
+              <div className="space-y-4">
+                <h4 className="text-sm font-black uppercase tracking-widest text-secondary">Quick Links</h4>
+                <nav className="flex flex-col gap-2 text-sm opacity-70">
+                  {["Home", "About", "Curriculum", "FAQ"].map((item) => (
+                    <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-secondary hover:opacity-100 transition-colors">
+                      {item}
+                    </a>
+                  ))}
+                </nav>
+              </div>
+              <div className="space-y-4">
+                <h4 className="text-sm font-black uppercase tracking-widest text-secondary">Contact Us</h4>
+                <div className="space-y-2 text-sm opacity-70">
+                  <p>Email: info@seehmmara.com</p>
+                  <p>Support: +91 99999 99999</p>
+                </div>
+              </div>
             </div>
           </div>
           <div className="flex flex-col items-center justify-between gap-4 pt-8 text-[10px] font-bold uppercase tracking-widest opacity-40 sm:flex-row">
