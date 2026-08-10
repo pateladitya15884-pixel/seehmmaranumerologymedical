@@ -306,6 +306,7 @@ function Index() {
                 { q: "Is the course really free?", a: "Yes, this batch is completely free as part of our mission to empower astrologers and healers." },
                 { q: "Will I get a certificate?", a: "Yes, students who attend all live classes will receive a professional certificate from Seehmmara Numerology." },
                 { q: "What is the duration of the course?", a: "The course spans 15+ hours of intensive live learning over multiple sessions starting 15th August." },
+                { q: "How can I join?", a: "You can click any of the 'Enroll Now' or 'Join WhatsApp' buttons across this page to join our official community." },
               ].map((faq, i) => (
                 <motion.div 
                   key={i} 
