@@ -219,21 +219,36 @@ function Index() {
               <p className="text-base text-muted-foreground italic sm:text-lg">"Complete Course — No hidden upsells, no sales pitch during class"</p>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               <div className="space-y-4 rounded-2xl bg-card p-6 shadow-sm ring-1 ring-primary/5 sm:p-8">
+                <h3 className="text-lg font-bold text-primary sm:text-xl">What is Medical Astrology?</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
+                  Medical Astrology is an ancient science that associates various parts of the body, diseases, and drugs as under the influence of the sun, moon, and planets, along with the twelve astrological signs.
+                </p>
+                <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
+                  By analyzing your birth chart, we can identify potential health vulnerabilities and time periods when extra care is needed.
+                </p>
+              </div>
+
+              <div className="space-y-4 rounded-2xl bg-card p-6 shadow-sm ring-1 ring-primary/5 border-t-4 border-secondary sm:p-8">
                 <h3 className="text-lg font-bold text-primary sm:text-xl">Advanced Level Curriculum</h3>
                 <div className="space-y-3">
                   <Feature>Understanding Body Parts & Planets</Feature>
                   <Feature>Disease Identification in Charts</Feature>
                   <Feature>Timing of Ailments</Feature>
                   <Feature>Effective Remedial Measures</Feature>
+                  <Feature>Mental Health & Planetary Alignment</Feature>
                 </div>
               </div>
-              <div className="space-y-4 rounded-2xl bg-card p-6 shadow-sm ring-1 ring-primary/5 border-l-4 border-secondary sm:p-8">
+
+              <div className="space-y-4 rounded-2xl bg-card p-6 shadow-sm ring-1 ring-primary/5 border-l-4 border-secondary md:col-span-2 lg:col-span-1 sm:p-8">
                 <h3 className="text-lg font-bold text-primary sm:text-xl">Instructor: Surrjit</h3>
                 <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
                   With years of experience in Numerology and Astrology, Surrjit has mentored thousands of students globally. 
                   His teaching style is practical, research-oriented, and focused on real-world results.
+                </p>
+                <p className="text-sm leading-relaxed text-muted-foreground sm:text-base italic">
+                  Join us to learn how to bridge the gap between spiritual energy and physical wellbeing.
                 </p>
               </div>
             </div>
