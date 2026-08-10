@@ -261,8 +261,8 @@ function Index() {
                       onChange={e => setFormData(prev => ({ ...prev, city: e.target.value }))}
                       className="h-12 bg-muted/50 border-transparent focus:bg-card"
                     />
-                    <Button type="submit" size="lg" className="w-full h-14 text-lg font-bold mt-4" disabled={register.isPending}>
-                      {register.isPending ? "Registering..." : "Join The Advanced Course"}
+                    <Button type="submit" size="lg" className="w-full h-14 text-lg font-bold mt-4" disabled={isPending}>
+                      {isPending ? "Registering..." : "Join The Advanced Course"}
                     </Button>
                   </form>
                   <p className="text-center text-xs text-muted-foreground">
