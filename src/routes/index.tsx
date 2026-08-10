@@ -118,8 +118,8 @@ function Index() {
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
+              viewport={{ once: true, margin: "0px" }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
               className="order-2 flex flex-col space-y-6 text-center lg:order-1 lg:text-left"
             >
               <div className="inline-flex self-center rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-bold text-secondary ring-1 ring-inset ring-secondary/20 lg:self-start sm:text-sm">
