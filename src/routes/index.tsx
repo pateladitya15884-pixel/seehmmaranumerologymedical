@@ -209,6 +209,7 @@ function Index() {
                 <p className="absolute bottom-6 left-0 right-0 text-center font-bold text-white text-lg">Surrjit — Instructor</p>
               </div>
             </motion.div>
+          </div>
         </div>
       </section>
 
