@@ -29,7 +29,7 @@ function Index() {
   const register = useServerFn(registerForCourse);
   const [isPending, setIsPending] = useState(false);
   const [formData, setFormData] = useState({ name: "", phone: "", email: "", city: "" });
-  const courseDate = new Date("2026-08-15T11:00:00");
+  const courseDate = new Date("2026-08-15T21:00:00+05:30");
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   const [isRegistered, setIsRegistered] = useState(false);
@@ -97,7 +97,7 @@ function Index() {
           </nav>
           <div className="flex items-center gap-2 sm:gap-4">
             <Button variant="outline" size="sm" className="hidden gap-2 border-primary/20 hover:bg-primary/5 sm:flex" asChild>
-              <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/918559091319" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="h-4 w-4" />
                 <span>Support</span>
               </a>
@@ -127,7 +127,7 @@ function Index() {
                     📅 Date: <span className="text-secondary">15th August 2026</span>
                   </p>
                   <p className="text-sm font-bold text-primary sm:text-base">
-                    ⏰ Time: <span className="text-secondary">11:00 AM IST</span>
+                    ⏰ Time: <span className="text-secondary">09:00 PM IST</span>
                   </p>
                 </div>
                 <p className="text-base text-muted-foreground sm:text-lg">
@@ -152,7 +152,7 @@ function Index() {
                     ))}
                   </div>
                   <div className="text-xs sm:text-sm">
-                    <p className="font-bold text-primary">1,200+ Students</p>
+                    <p className="font-bold text-primary">10k+ Students</p>
                     <p className="text-muted-foreground">Already enrolled</p>
                   </div>
                 </div>
