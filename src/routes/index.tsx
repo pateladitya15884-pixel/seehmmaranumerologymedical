@@ -82,11 +82,11 @@ function Index() {
       </div>
 
       {/* Header */}
-      <header className="sticky top-8 z-40 border-b bg-card/80 backdrop-blur-md transition-all duration-300">
+      <header className="sticky top-0 z-40 border-b bg-card/80 backdrop-blur-md transition-all duration-300">
         <div className="container mx-auto flex items-center justify-between px-4 py-3 sm:py-4">
           <div className="flex items-center gap-2 sm:gap-3">
             <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-10 w-10 object-contain bg-white rounded-full p-1 shadow-sm sm:h-12 sm:w-12" />
-            <span className="text-lg font-bold tracking-tight text-primary sm:text-xl">Seehmmara</span>
+            <span className="text-xl font-black tracking-tighter text-primary sm:text-2xl">SEEHMMARA</span>
           </div>
           <nav className="hidden items-center gap-6 lg:flex xl:gap-8">
             {["Home", "About", "Curriculum", "FAQ"].map((item) => (
