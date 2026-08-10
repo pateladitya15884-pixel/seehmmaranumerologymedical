@@ -390,10 +390,17 @@ function Index() {
                 { q: "Will I get a certificate?", a: "Yes, students who attend all live classes will receive a professional certificate from Seehmmara Numerology." },
                 { q: "What is the duration of the course?", a: "The course spans 15+ hours of intensive live learning over multiple sessions starting 15th August." },
               ].map((faq, i) => (
-                <div key={i} className="rounded-2xl bg-card p-5 shadow-sm ring-1 ring-primary/5 sm:p-6">
+                <motion.div 
+                  key={i} 
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.3, delay: i * 0.05 }}
+                  className="rounded-2xl bg-card p-5 shadow-sm ring-1 ring-primary/5 sm:p-6"
+                >
                   <h3 className="text-base font-bold text-primary sm:text-lg">{faq.q}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{faq.a}</p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
