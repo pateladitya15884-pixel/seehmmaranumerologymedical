@@ -362,7 +362,6 @@ function Index() {
               <div className="space-y-4">
                 <h4 className="text-sm font-black uppercase tracking-widest text-secondary">Contact Us</h4>
                 <div className="space-y-2 text-sm opacity-70">
-                  <p>Email: info@seehmmara.com</p>
                   <p>Support: +91 99999 99999</p>
                 </div>
               </div>
