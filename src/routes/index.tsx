@@ -31,7 +31,7 @@ function Index() {
   const courseDate = new Date("2026-08-15T21:00:00+05:30");
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
-  const whatsappLink = "https://chat.whatsapp.com/G35u0y8UqBv9L5m4x7eR1z"; // Replace with your actual group link
+  const whatsappLink = "https://chat.whatsapp.com/G35u0y8UqBv9L5m4x7eR1z";
 
   useEffect(() => {
     const calculateTimeLeft = () => {
