@@ -49,6 +49,7 @@ function Index() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsPending(true);
     try {
       const result = await register({ data: formData });
       setIsRegistered(true);
@@ -56,6 +57,8 @@ function Index() {
       toast.success("Registration successful!");
     } catch (error) {
       toast.error(error instanceof Error ? error.message : "Registration failed");
+    } finally {
+      setIsPending(false);
     }
   };
 
