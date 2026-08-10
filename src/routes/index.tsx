@@ -90,7 +90,7 @@ function Index() {
           </div>
           <nav className="hidden items-center gap-6 lg:flex xl:gap-8">
             {["Home", "About", "Curriculum", "FAQ"].map((item) => (
-              <a key={item} href={`#${item.toLowerCase()}`} className="text-sm font-medium transition-colors hover:text-secondary">
+              <a key={item} href={`#${item.toLowerCase()}`} className="text-sm font-medium transition-colors hover:text-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded-sm">
                 {item}
               </a>
             ))}
@@ -253,36 +253,48 @@ function Index() {
                     <p className="text-sm text-muted-foreground sm:text-base">Limited spots available for this batch.</p>
                   </div>
                   <form onSubmit={handleSubmit} className="space-y-4">
-                    <Input 
-                      placeholder="Full Name" 
-                      required 
-                      value={formData.name}
-                      onChange={e => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                      className="h-12 bg-muted/50 border-transparent focus:bg-card"
-                    />
-                    <Input 
-                      placeholder="WhatsApp Phone Number" 
-                      type="tel" 
-                      required 
-                      value={formData.phone}
-                      onChange={e => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                      className="h-12 bg-muted/50 border-transparent focus:bg-card"
-                    />
-                    <Input 
-                      placeholder="Email Address" 
-                      type="email" 
-                      required 
-                      value={formData.email}
-                      onChange={e => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                      className="h-12 bg-muted/50 border-transparent focus:bg-card"
-                    />
-                    <Input 
-                      placeholder="City" 
-                      required 
-                      value={formData.city}
-                      onChange={e => setFormData(prev => ({ ...prev, city: e.target.value }))}
-                      className="h-12 bg-muted/50 border-transparent focus:bg-card"
-                    />
+                    <div className="space-y-2">
+                      <Input 
+                        placeholder="Full Name" 
+                        required 
+                        aria-label="Full Name"
+                        value={formData.name}
+                        onChange={e => setFormData(prev => ({ ...prev, name: e.target.value }))}
+                        className="h-12 bg-muted/50 border-transparent focus:bg-card"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Input 
+                        placeholder="WhatsApp Phone Number" 
+                        type="tel" 
+                        required 
+                        aria-label="WhatsApp Phone Number"
+                        value={formData.phone}
+                        onChange={e => setFormData(prev => ({ ...prev, phone: e.target.value }))}
+                        className="h-12 bg-muted/50 border-transparent focus:bg-card"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Input 
+                        placeholder="Email Address" 
+                        type="email" 
+                        required 
+                        aria-label="Email Address"
+                        value={formData.email}
+                        onChange={e => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                        className="h-12 bg-muted/50 border-transparent focus:bg-card"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Input 
+                        placeholder="City" 
+                        required 
+                        aria-label="City"
+                        value={formData.city}
+                        onChange={e => setFormData(prev => ({ ...prev, city: e.target.value }))}
+                        className="h-12 bg-muted/50 border-transparent focus:bg-card"
+                      />
+                    </div>
                     <Button type="submit" size="lg" className="w-full h-14 text-lg font-bold mt-4" disabled={isPending}>
                       {isPending ? "Registering..." : "Join The Advanced Course"}
                     </Button>
@@ -370,8 +382,8 @@ function Index() {
           <div className="flex flex-col items-center justify-between gap-4 pt-8 text-[10px] font-bold uppercase tracking-widest opacity-40 sm:flex-row">
             <p>© 2026 Seehmmara Numerology. All Rights Reserved.</p>
             <div className="flex gap-8">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
+              <a href="#register" className="hover:opacity-100 transition-opacity">Privacy Policy</a>
+              <a href="#register" className="hover:opacity-100 transition-opacity">Terms of Service</a>
             </div>
           </div>
         </div>
