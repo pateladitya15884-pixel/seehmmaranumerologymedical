@@ -192,17 +192,17 @@ function Index() {
       </div>
 
       {/* About Course Section */}
-      <section className="py-24" id="about">
+      <section className="py-16 md:py-24" id="about">
         <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-3xl space-y-12">
+          <div className="mx-auto max-w-4xl space-y-12">
             <div className="text-center space-y-4">
-              <h2 className="text-3xl font-black text-primary sm:text-5xl">Why This Course?</h2>
-              <p className="text-lg text-muted-foreground italic">"Complete Course — No hidden upsells, no sales pitch during class"</p>
+              <h2 className="text-2xl font-black text-primary sm:text-4xl md:text-5xl">Why This Course?</h2>
+              <p className="text-base text-muted-foreground italic sm:text-lg">"Complete Course — No hidden upsells, no sales pitch during class"</p>
             </div>
 
             <div className="grid gap-6 md:grid-cols-2">
-              <div className="space-y-4 rounded-2xl bg-card p-8 shadow-sm ring-1 ring-primary/5">
-                <h3 className="text-xl font-bold text-primary">Advanced Level Curriculum</h3>
+              <div className="space-y-4 rounded-2xl bg-card p-6 shadow-sm ring-1 ring-primary/5 sm:p-8">
+                <h3 className="text-lg font-bold text-primary sm:text-xl">Advanced Level Curriculum</h3>
                 <div className="space-y-3">
                   <Feature>Understanding Body Parts & Planets</Feature>
                   <Feature>Disease Identification in Charts</Feature>
@@ -210,9 +210,9 @@ function Index() {
                   <Feature>Effective Remedial Measures</Feature>
                 </div>
               </div>
-              <div className="space-y-4 rounded-2xl bg-card p-8 shadow-sm ring-1 ring-primary/5 border-l-4 border-secondary">
-                <h3 className="text-xl font-bold text-primary">Instructor: Surrjit</h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">
+              <div className="space-y-4 rounded-2xl bg-card p-6 shadow-sm ring-1 ring-primary/5 border-l-4 border-secondary sm:p-8">
+                <h3 className="text-lg font-bold text-primary sm:text-xl">Instructor: Surrjit</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
                   With years of experience in Numerology and Astrology, Surrjit has mentored thousands of students globally. 
                   His teaching style is practical, research-oriented, and focused on real-world results.
                 </p>
