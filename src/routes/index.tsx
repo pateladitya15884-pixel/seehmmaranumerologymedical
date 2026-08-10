@@ -319,7 +319,7 @@ function Index() {
           <div className="grid gap-12 border-b border-primary-foreground/10 pb-12 md:grid-cols-3">
             <div className="space-y-6">
               <div className="flex items-center gap-3">
-                <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-12 w-12 rounded-full border-2 border-secondary bg-white object-cover" />
+                <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-12 w-12 object-contain bg-white rounded-full p-1" />
                 <span className="text-xl font-bold tracking-tight">Seehmmara Numerology</span>
               </div>
               <p className="text-sm opacity-70">
