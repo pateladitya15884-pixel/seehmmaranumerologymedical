@@ -322,8 +322,8 @@ function Index() {
               {[
                 { q: "Is this really a full course or just a webinar?", a: "This is a 100% full advanced course. There is no sales pitch, no 'buy the course' at the end, and no hidden upsells. Our goal is to spread quality knowledge." },
                 { q: "Is the course really free?", a: "Yes, this batch is completely free as part of our mission to empower astrologers and healers." },
-                { q: "Will I get a certificate?", a: "Yes, students who attend all live classes and complete the assessment will receive a professional certificate from Seehmmara Numerology." },
-                { q: "What is the duration of the course?", a: "The course spans 15+ hours of intensive live learning over multiple sessions." },
+                { q: "Will I get a certificate?", a: "Yes, students who attend all live classes will receive a professional certificate from Seehmmara Numerology." },
+                { q: "What is the duration of the course?", a: "The course spans 15+ hours of intensive live learning over multiple sessions starting 15th August." },
               ].map((faq, i) => (
                 <div key={i} className="rounded-2xl bg-card p-5 shadow-sm ring-1 ring-primary/5 sm:p-6">
                   <h3 className="text-base font-bold text-primary sm:text-lg">{faq.q}</h3>
