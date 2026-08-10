@@ -118,8 +118,8 @@ function Index() {
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
+              viewport={{ once: true, margin: "0px" }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
               className="order-2 flex flex-col space-y-6 text-center lg:order-1 lg:text-left"
             >
               <div className="inline-flex self-center rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-bold text-secondary ring-1 ring-inset ring-secondary/20 lg:self-start sm:text-sm">
@@ -192,10 +192,10 @@ function Index() {
             </motion.div>
 
             <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
+              initial={{ opacity: 0, scale: 0.98, y: 10 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              viewport={{ once: true, margin: "0px" }}
+              transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
               className="order-1 relative mx-auto max-w-sm xl:max-w-md lg:order-2"
             >
               <div className="absolute -inset-4 rounded-3xl bg-secondary/10 blur-2xl" />
@@ -215,10 +215,10 @@ function Index() {
 
       {/* Stats Bar */}
       <motion.div 
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.4, ease: "easeOut" }}
+        viewport={{ once: true, margin: "0px" }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
         className="bg-primary py-10 text-primary-foreground sm:py-12"
       >
         <div className="container mx-auto grid grid-cols-2 gap-y-10 gap-x-4 px-4 text-center md:grid-cols-4">
@@ -242,8 +242,8 @@ function Index() {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
+            viewport={{ once: true, margin: "0px" }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
             className="mx-auto max-w-4xl space-y-12"
           >
             <div className="text-center space-y-4">
@@ -292,10 +292,10 @@ function Index() {
       <section className="bg-muted py-24" id="register">
         <div className="container mx-auto px-4">
           <motion.div 
-            initial={{ opacity: 0, scale: 0.98, y: 20 }}
+            initial={{ opacity: 0, scale: 0.98, y: 15 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
+            viewport={{ once: true, margin: "0px" }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
             className="mx-auto max-w-xl"
           >
             <div className="rounded-3xl bg-card p-6 shadow-2xl shadow-primary/10 ring-1 ring-primary/5 sm:p-10 md:p-12">
@@ -394,8 +394,8 @@ function Index() {
                   key={i} 
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.3, delay: i * 0.05 }}
+                  viewport={{ once: true, margin: "0px" }}
+                  transition={{ duration: 0.2, delay: i * 0.05 }}
                   className="rounded-2xl bg-card p-5 shadow-sm ring-1 ring-primary/5 sm:p-6"
                 >
                   <h3 className="text-base font-bold text-primary sm:text-lg">{faq.q}</h3>
