@@ -244,7 +244,7 @@ function Index() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "0px" }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="mx-auto max-w-4xl space-y-12"
+            className="mx-auto max-w-7xl space-y-12"
           >
             <div className="text-center space-y-4">
               <h2 className="text-4xl font-black text-primary sm:text-5xl md:text-6xl">Why This Course?</h2>
