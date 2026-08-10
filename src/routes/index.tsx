@@ -81,9 +81,9 @@ function Index() {
           </nav>
           <div className="flex items-center gap-2 sm:gap-4">
             <Button variant="outline" size="sm" className="hidden gap-2 border-primary/20 hover:bg-primary/5 sm:flex" asChild>
-              <a href="https://wa.me/918559091319" target="_blank" rel="noopener noreferrer">
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="h-4 w-4 text-[#25D366]" />
-                <span>WhatsApp</span>
+                <span>Join Group</span>
               </a>
             </Button>
             <Button variant="outline" size="sm" className="hidden gap-2 border-primary/20 hover:bg-primary/5 sm:flex" asChild title="Call Support">
