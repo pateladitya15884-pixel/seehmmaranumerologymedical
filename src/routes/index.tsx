@@ -100,8 +100,14 @@ function Index() {
           <div className="flex items-center gap-2 sm:gap-4">
             <Button variant="outline" size="sm" className="hidden gap-2 border-primary/20 hover:bg-primary/5 sm:flex" asChild>
               <a href="https://wa.me/918559091319" target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="h-4 w-4" />
-                <span>Support</span>
+                <MessageCircle className="h-4 w-4 text-[#25D366]" />
+                <span>WhatsApp</span>
+              </a>
+            </Button>
+            <Button variant="outline" size="sm" className="hidden gap-2 border-primary/20 hover:bg-primary/5 sm:flex" asChild title="Call Support">
+              <a href="tel:+918559091319">
+                <Phone className="h-4 w-4 text-primary" />
+                <span>Call</span>
               </a>
             </Button>
             <Button size="sm" className="h-9 px-4 text-xs font-bold sm:hidden" asChild>
