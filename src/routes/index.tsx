@@ -112,7 +112,7 @@ function Index() {
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-8 pb-16 md:pt-24 md:pb-32" id="home">
         <div className="container relative z-10 mx-auto px-4">
-          <div className="grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
+          <div className="grid items-center gap-8 lg:gap-12 lg:grid-cols-2 max-w-7xl mx-auto">
             <div className="order-2 flex flex-col space-y-6 text-center lg:order-1 lg:text-left">
               <div className="inline-flex self-center rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-bold text-secondary ring-1 ring-inset ring-secondary/20 lg:self-start sm:text-sm">
                 A Complete Advanced Course • 100% FREE
@@ -183,7 +183,7 @@ function Index() {
               </div>
             </div>
 
-            <div className="order-1 relative mx-auto max-w-md lg:order-2 lg:max-w-none">
+            <div className="order-1 relative mx-auto max-w-sm xl:max-w-md lg:order-2">
               <div className="absolute -inset-4 rounded-3xl bg-secondary/10 blur-2xl" />
               <div className="relative overflow-hidden rounded-3xl border-8 border-card shadow-2xl">
                 <img 
