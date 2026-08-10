@@ -445,7 +445,12 @@ function Index() {
                 <h4 className="text-sm font-black uppercase tracking-widest text-secondary">Contact Us</h4>
                 <div className="space-y-2 text-sm opacity-70">
                   <p>Email: seehmmaranumerology@gmail.com</p>
-                  <p>WhatsApp: +91 85590 91319</p>
+                  <p>
+                    WhatsApp: <a href="https://wa.me/918559091319" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors underline decoration-secondary/30 underline-offset-4">+91 85590 91319</a>
+                  </p>
+                  <p>
+                    Call: <a href="tel:+918559091319" className="hover:text-secondary transition-colors underline decoration-secondary/30 underline-offset-4">+91 85590 91319</a>
+                  </p>
                 </div>
               </div>
             </div>
