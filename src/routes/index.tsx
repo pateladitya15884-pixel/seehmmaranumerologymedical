@@ -31,7 +31,7 @@ function Index() {
   const courseDate = new Date("2026-08-15T21:00:00+05:30");
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
-  const whatsappLink = "https://chat.whatsapp.com/EXAMPLE_LINK"; // Replace with your actual group link
+  const whatsappLink = "https://chat.whatsapp.com/G35u0y8UqBv9L5m4x7eR1z"; // Replace with your actual group link
 
   useEffect(() => {
     const calculateTimeLeft = () => {
@@ -81,9 +81,9 @@ function Index() {
           </nav>
           <div className="flex items-center gap-2 sm:gap-4">
             <Button variant="outline" size="sm" className="hidden gap-2 border-primary/20 hover:bg-primary/5 sm:flex" asChild>
-              <a href="https://wa.me/918559091319" target="_blank" rel="noopener noreferrer">
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="h-4 w-4 text-[#25D366]" />
-                <span>WhatsApp</span>
+                <span>Join Group</span>
               </a>
             </Button>
             <Button variant="outline" size="sm" className="hidden gap-2 border-primary/20 hover:bg-primary/5 sm:flex" asChild title="Call Support">
@@ -258,6 +258,13 @@ function Index() {
                 </div>
               </div>
             </div>
+            <div className="flex justify-center mt-12">
+              <Button size="lg" className="h-14 gap-2 px-10 text-lg font-bold shadow-xl" asChild>
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                  Join The Course Now <ArrowRight className="h-5 w-5" />
+                </a>
+              </Button>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -306,6 +313,7 @@ function Index() {
                 { q: "Is the course really free?", a: "Yes, this batch is completely free as part of our mission to empower astrologers and healers." },
                 { q: "Will I get a certificate?", a: "Yes, students who attend all live classes will receive a professional certificate from Seehmmara Numerology." },
                 { q: "What is the duration of the course?", a: "The course spans 15+ hours of intensive live learning over multiple sessions starting 15th August." },
+                { q: "How can I join?", a: "You can click any of the 'Enroll Now' or 'Join WhatsApp' buttons across this page to join our official community." },
               ].map((faq, i) => (
                 <motion.div 
                   key={i} 
