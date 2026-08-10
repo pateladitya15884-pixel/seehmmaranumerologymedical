@@ -126,7 +126,7 @@ function Index() {
               </p>
               
               <div className="flex flex-col items-center gap-4 sm:flex-row lg:justify-start">
-                <Button size="lg" className="h-14 gap-2 px-8 text-lg font-bold shadow-lg shadow-primary/20" asChild>
+                <Button size="lg" className="h-12 w-full gap-2 px-8 text-lg font-bold shadow-lg shadow-primary/20 sm:h-14 sm:w-auto" asChild>
                   <a href="#register">
                     Enroll Now <ArrowRight className="h-5 w-5" />
                   </a>
@@ -134,12 +134,12 @@ function Index() {
                 <div className="flex items-center gap-4 text-left">
                   <div className="flex -space-x-2">
                     {[1, 2, 3].map((i) => (
-                      <div key={i} className="h-10 w-10 rounded-full border-2 border-background bg-muted" />
+                      <div key={i} className="h-8 w-8 rounded-full border-2 border-background bg-muted sm:h-10 sm:w-10" />
                     ))}
                   </div>
-                  <div className="text-sm">
+                  <div className="text-xs sm:text-sm">
                     <p className="font-bold text-primary">1,200+ Students</p>
-                    <p className="text-muted-foreground">Already enrolled this batch</p>
+                    <p className="text-muted-foreground">Already enrolled</p>
                   </div>
                 </div>
               </div>
