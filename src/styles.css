@@ -150,4 +150,11 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
   }
+
+  /* Fix for viewport scaling issues on mobile */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
 }

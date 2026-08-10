@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import logoAsset from "@/assets/logo.png.asset.json";
-import surrjitAsset from "@/assets/surrjit.png.asset.json";
+
 import { useServerFn } from "@tanstack/react-start";
 import { registerForCourse } from "@/lib/registrations.functions";
 import { CheckCircle, Users, GraduationCap, ArrowRight, MessageCircle, Phone } from "lucide-react";
@@ -28,14 +28,11 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  const register = useServerFn(registerForCourse);
-  const [isPending, setIsPending] = useState(false);
-  const [formData, setFormData] = useState({ name: "", phone: "", email: "", city: "" });
+  const courseDate = new Date("2026-08-15T21:00:00+05:30");
   const courseDate = new Date("2026-08-15T21:00:00+05:30");
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
-  const [isRegistered, setIsRegistered] = useState(false);
-  const [whatsappLink, setWhatsappLink] = useState("");
+  const whatsappLink = "https://chat.whatsapp.com/EXAMPLE_LINK"; // Replace with your actual group link
 
   useEffect(() => {
     const calculateTimeLeft = () => {
@@ -54,20 +51,6 @@ function Index() {
     return () => clearInterval(timer);
   }, []);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsPending(true);
-    try {
-      const result = await register({ data: formData });
-      setIsRegistered(true);
-      setWhatsappLink(result.whatsappLink);
-      toast.success("Registration successful!");
-    } catch (error) {
-      toast.error(error instanceof Error ? error.message : "Registration failed");
-    } finally {
-      setIsPending(false);
-    }
-  };
 
   const Feature = ({ children }: { children: React.ReactNode }) => (
     <div className="flex items-start gap-3">
@@ -111,7 +94,7 @@ function Index() {
               </a>
             </Button>
             <Button size="sm" className="h-9 px-4 text-xs font-bold sm:hidden" asChild>
-              <a href="#register">Enroll</a>
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">Enroll</a>
             </Button>
           </div>
         </div>
@@ -120,23 +103,23 @@ function Index() {
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-8 pb-16 md:pt-24 md:pb-32" id="home">
         <div className="container relative z-10 mx-auto px-4">
-          <div className="grid items-start gap-8 lg:gap-12 lg:grid-cols-2 max-w-7xl mx-auto">
+          <div className="flex flex-col items-center gap-8 lg:gap-12 max-w-7xl mx-auto">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "0px" }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="order-2 flex flex-col space-y-6 text-center lg:order-1 lg:text-left"
+              className="flex flex-col space-y-6 text-center"
             >
-              <div className="inline-flex self-center rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-bold text-secondary ring-1 ring-inset ring-secondary/20 lg:self-start sm:text-sm">
+              <div className="inline-flex self-center rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-bold text-secondary ring-1 ring-inset ring-secondary/20 sm:text-sm">
                 A Complete Advanced Course • 100% FREE
               </div>
               <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl lg:text-7xl">
                 Medical Astrology <br />
                 <span className="text-secondary">Advanced Course</span>
               </h1>
-              <div className="mx-auto max-w-xl space-y-4 lg:mx-0">
-                <div className="flex flex-col gap-2 rounded-xl border border-secondary/20 bg-secondary/5 p-4 text-center lg:text-left">
+              <div className="mx-auto max-w-xl space-y-4">
+                <div className="flex flex-col gap-2 rounded-xl border border-secondary/20 bg-secondary/5 p-4 text-center">
                   <p className="text-sm font-bold text-primary sm:text-base">
                     📅 Date: <span className="text-secondary">15th August 2026</span>
                   </p>
@@ -153,9 +136,9 @@ function Index() {
                 </p>
               </div>
               
-              <div className="flex flex-col items-center gap-4 sm:flex-row lg:justify-start">
+              <div className="flex flex-col items-center gap-4 sm:flex-row justify-center">
                 <Button size="lg" className="h-12 w-full gap-2 px-8 text-lg font-bold shadow-lg shadow-primary/20 sm:h-14 sm:w-auto" asChild>
-                  <a href="#register">
+                  <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                     Enroll Now <ArrowRight className="h-5 w-5" />
                   </a>
                 </Button>
@@ -179,7 +162,7 @@ function Index() {
               </div>
 
               {/* Countdown Timer */}
-              <div className="flex flex-col items-center gap-4 rounded-2xl bg-card p-4 shadow-xl shadow-primary/5 ring-1 ring-primary/5 sm:p-6 lg:items-start">
+              <div className="flex flex-col items-center gap-4 rounded-2xl bg-card p-4 shadow-xl shadow-primary/5 ring-1 ring-primary/5 sm:p-6 mx-auto">
                 <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground sm:text-sm">Registration Closes In</p>
                 <div className="flex gap-4 sm:gap-8">
                   {[
@@ -197,24 +180,6 @@ function Index() {
               </div>
             </motion.div>
 
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.98, y: 10 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              viewport={{ once: true, margin: "0px" }}
-              transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
-              className="order-1 relative mx-auto max-w-sm xl:max-w-md lg:order-2"
-            >
-              <div className="absolute -inset-4 rounded-3xl bg-secondary/10 blur-2xl" />
-              <div className="relative overflow-hidden rounded-3xl border-8 border-card shadow-2xl">
-                <img 
-                  src={surrjitAsset.url} 
-                  alt="Numerologist Surrjit" 
-                  className="aspect-[3/4] w-full object-cover object-top"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
-                <p className="absolute bottom-6 left-0 right-0 text-center font-bold text-white text-lg">Surrjit — Instructor</p>
-              </div>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -306,83 +271,26 @@ function Index() {
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true, margin: "0px" }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="mx-auto max-w-xl"
+            className="mx-auto max-w-2xl text-center space-y-8"
           >
-            <div className="rounded-3xl bg-card p-6 shadow-2xl shadow-primary/10 ring-1 ring-primary/5 sm:p-10 md:p-12">
-              {!isRegistered ? (
-                <div className="space-y-6 sm:space-y-8">
-                  <div className="text-center space-y-2">
-                    <h2 className="text-2xl font-black text-primary sm:text-3xl">Reserve Your Free Seat</h2>
-                    <p className="text-sm text-muted-foreground sm:text-base">Limited spots available for this batch.</p>
-                  </div>
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className="space-y-2">
-                      <Input 
-                        placeholder="Full Name" 
-                        required 
-                        aria-label="Full Name"
-                        value={formData.name}
-                        onChange={e => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                        className="h-12 bg-muted/50 border-transparent focus:bg-card"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Input 
-                        placeholder="WhatsApp Phone Number" 
-                        type="tel" 
-                        required 
-                        aria-label="WhatsApp Phone Number"
-                        value={formData.phone}
-                        onChange={e => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                        className="h-12 bg-muted/50 border-transparent focus:bg-card"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Input 
-                        placeholder="Email Address" 
-                        type="email" 
-                        required 
-                        aria-label="Email Address"
-                        value={formData.email}
-                        onChange={e => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                        className="h-12 bg-muted/50 border-transparent focus:bg-card"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Input 
-                        placeholder="City" 
-                        required 
-                        aria-label="City"
-                        value={formData.city}
-                        onChange={e => setFormData(prev => ({ ...prev, city: e.target.value }))}
-                        className="h-12 bg-muted/50 border-transparent focus:bg-card"
-                      />
-                    </div>
-                    <Button type="submit" size="lg" className="w-full h-14 text-lg font-bold mt-4" disabled={isPending}>
-                      {isPending ? "Registering..." : "Join The Advanced Course"}
-                    </Button>
-                  </form>
-                  <p className="text-center text-xs text-muted-foreground">
-                    By registering, you agree to receive communications regarding this course.
-                  </p>
+            <div className="rounded-3xl bg-card p-8 shadow-2xl shadow-primary/10 ring-1 ring-primary/5 sm:p-12">
+              <div className="space-y-6">
+                <div className="space-y-2">
+                  <h2 className="text-3xl font-black text-primary sm:text-4xl">Join the Official Group</h2>
+                  <p className="text-lg text-muted-foreground">Click below to join the WhatsApp group and receive all class links, notes, and session updates directly.</p>
                 </div>
-              ) : (
-                <div className="text-center space-y-8 py-8 animate-in fade-in zoom-in duration-500">
-                  <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-secondary/10 text-secondary">
-                    <CheckCircle className="h-12 w-12" />
-                  </div>
-                  <div className="space-y-3">
-                    <h2 className="text-3xl font-black text-primary">Registration Complete!</h2>
-                    <p className="text-muted-foreground">You're one step away. Join our official WhatsApp group to get class links and materials.</p>
-                  </div>
-                  <Button size="lg" className="w-full h-16 text-lg font-bold bg-[#25D366] hover:bg-[#128C7E] border-none text-white shadow-xl shadow-green-500/20" asChild>
-                    <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                      <MessageCircle className="mr-2 h-6 w-6 fill-current" />
-                      Join WhatsApp Group
-                    </a>
-                  </Button>
-                </div>
-              )}
+                
+                <Button size="lg" className="w-full h-16 text-xl font-bold bg-[#25D366] hover:bg-[#128C7E] border-none text-white shadow-xl shadow-green-500/20" asChild>
+                  <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="mr-2 h-7 w-7 fill-current" />
+                    Join WhatsApp Group Now
+                  </a>
+                </Button>
+                
+                <p className="text-sm text-muted-foreground font-medium">
+                  ✨ 100% Free Access • Official Announcements Only • Secure Community
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -473,7 +381,7 @@ function Index() {
           </a>
         </Button>
         <Button className="flex-1 h-12 font-bold shadow-lg shadow-primary/10" asChild>
-          <a href="#register">Register for FREE</a>
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer">Register for FREE</a>
         </Button>
       </div>
     </div>
