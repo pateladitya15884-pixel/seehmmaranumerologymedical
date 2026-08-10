@@ -29,7 +29,6 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const courseDate = new Date("2026-08-15T21:00:00+05:30");
-  const courseDate = new Date("2026-08-15T21:00:00+05:30");
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   const whatsappLink = "https://chat.whatsapp.com/EXAMPLE_LINK"; // Replace with your actual group link
