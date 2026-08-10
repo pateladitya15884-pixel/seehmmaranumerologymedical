@@ -354,7 +354,7 @@ function Index() {
             <div className="space-y-6">
               <div className="flex items-center gap-3">
                 <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-10 w-10 object-contain bg-white rounded-full p-1 sm:h-12 sm:w-12" />
-                <span className="text-2xl font-black tracking-tighter">SEEHMMARA</span>
+                <span className="text-2xl font-black tracking-tighter">SEEHMMARA NUMEROLOGY</span>
               </div>
               <p className="text-sm leading-relaxed opacity-70">
                 Empowering healers and astrologers through authentic, advanced knowledge in Medical Astrology and Numerology.
