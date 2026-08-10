@@ -86,7 +86,7 @@ function Index() {
         <div className="container mx-auto flex items-center justify-between px-4 py-3 sm:py-4">
           <div className="flex items-center gap-2 sm:gap-3">
             <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-10 w-10 object-contain bg-white rounded-full p-1 shadow-sm sm:h-12 sm:w-12" />
-            <span className="text-xl font-black tracking-tighter text-primary sm:text-2xl">SEEHMMARA</span>
+            <span className="text-xl font-black tracking-tighter text-primary sm:text-2xl">SEEHMMARA NUMEROLOGY</span>
           </div>
           <nav className="hidden items-center gap-6 lg:flex xl:gap-8">
             {["Home", "About", "Curriculum", "FAQ"].map((item) => (
@@ -354,7 +354,7 @@ function Index() {
             <div className="space-y-6">
               <div className="flex items-center gap-3">
                 <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-10 w-10 object-contain bg-white rounded-full p-1 sm:h-12 sm:w-12" />
-                <span className="text-2xl font-black tracking-tighter">SEEHMMARA</span>
+                <span className="text-2xl font-black tracking-tighter">SEEHMMARA NUMEROLOGY</span>
               </div>
               <p className="text-sm leading-relaxed opacity-70">
                 Empowering healers and astrologers through authentic, advanced knowledge in Medical Astrology and Numerology.
