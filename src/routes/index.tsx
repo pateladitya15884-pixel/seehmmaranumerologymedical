@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import logoAsset from "@/assets/logo.png.asset.json";
+import surrjitAsset from "@/assets/surrjit.png.asset.json";
 import { useServerFn } from "@tanstack/react-start";
 import { registerForCourse } from "@/lib/registrations.functions";
 import { CheckCircle, Users, GraduationCap, ArrowRight, MessageCircle } from "lucide-react";
@@ -80,7 +81,7 @@ function Index() {
       <header className="border-b bg-card/50 backdrop-blur-md">
         <div className="container mx-auto flex items-center justify-between px-4 py-4">
           <div className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-12 w-12 object-contain" />
+            <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-12 w-12 object-contain bg-white rounded-full p-1 shadow-sm" />
             <span className="hidden text-xl font-bold tracking-tight text-primary sm:block">Seehmmara Numerology</span>
           </div>
           <nav className="hidden items-center gap-8 md:flex">
@@ -160,11 +161,13 @@ function Index() {
             <div className="relative mx-auto max-w-md lg:max-w-none">
               <div className="absolute -inset-4 rounded-3xl bg-secondary/10 blur-2xl" />
               <div className="relative overflow-hidden rounded-3xl border-8 border-card shadow-2xl">
-                {/* Replace with real instructor image if available */}
-                <div className="aspect-[3/4] bg-primary/10 flex items-center justify-center">
-                  <GraduationCap className="h-32 w-32 text-primary/20" />
-                  <p className="absolute bottom-8 left-0 right-0 text-center font-bold text-primary">Surrjit — Instructor</p>
-                </div>
+                <img 
+                  src={surrjitAsset.url} 
+                  alt="Numerologist Surrjit" 
+                  className="aspect-[3/4] w-full object-cover object-top"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
+                <p className="absolute bottom-6 left-0 right-0 text-center font-bold text-white text-lg">Surrjit — Instructor</p>
               </div>
             </div>
           </div>
