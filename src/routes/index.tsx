@@ -382,8 +382,8 @@ function Index() {
           <div className="flex flex-col items-center justify-between gap-4 pt-8 text-[10px] font-bold uppercase tracking-widest opacity-40 sm:flex-row">
             <p>© 2026 Seehmmara Numerology. All Rights Reserved.</p>
             <div className="flex gap-8">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
+              <a href="#register" className="hover:opacity-100 transition-opacity">Privacy Policy</a>
+              <a href="#register" className="hover:opacity-100 transition-opacity">Terms of Service</a>
             </div>
           </div>
         </div>
