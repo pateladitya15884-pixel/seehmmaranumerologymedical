@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import logoAsset from "@/assets/logo.png.asset.json";
+import surrjitAsset from "@/assets/surrjit.png.asset.json";
 import { useServerFn } from "@tanstack/react-start";
 import { registerForCourse } from "@/lib/registrations.functions";
 import { CheckCircle, Users, GraduationCap, ArrowRight, MessageCircle } from "lucide-react";
