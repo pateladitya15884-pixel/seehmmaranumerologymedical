@@ -78,25 +78,30 @@ function Index() {
       </div>
 
       {/* Header */}
-      <header className="border-b bg-card/50 backdrop-blur-md">
-        <div className="container mx-auto flex items-center justify-between px-4 py-4">
-          <div className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-12 w-12 object-contain bg-white rounded-full p-1 shadow-sm" />
-            <span className="hidden text-xl font-bold tracking-tight text-primary sm:block">Seehmmara Numerology</span>
+      <header className="sticky top-8 z-40 border-b bg-card/80 backdrop-blur-md transition-all duration-300">
+        <div className="container mx-auto flex items-center justify-between px-4 py-3 sm:py-4">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-10 w-10 object-contain bg-white rounded-full p-1 shadow-sm sm:h-12 sm:w-12" />
+            <span className="text-lg font-bold tracking-tight text-primary sm:text-xl">Seehmmara</span>
           </div>
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav className="hidden items-center gap-6 lg:flex xl:gap-8">
             {["Home", "About", "Curriculum", "FAQ"].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`} className="text-sm font-medium transition-colors hover:text-secondary">
                 {item}
               </a>
             ))}
           </nav>
-          <Button variant="outline" className="gap-2 border-primary/20 hover:bg-primary/5" asChild>
-            <a href="https://wa.me/919999999999">
-              <MessageCircle className="h-4 w-4" />
-              <span>Contact Support</span>
-            </a>
-          </Button>
+          <div className="flex items-center gap-2 sm:gap-4">
+            <Button variant="outline" size="sm" className="hidden gap-2 border-primary/20 hover:bg-primary/5 sm:flex" asChild>
+              <a href="https://wa.me/919999999999">
+                <MessageCircle className="h-4 w-4" />
+                <span>Support</span>
+              </a>
+            </Button>
+            <Button size="sm" className="h-9 px-4 text-xs font-bold sm:hidden" asChild>
+              <a href="#register">Enroll</a>
+            </Button>
+          </div>
         </div>
       </header>
 
