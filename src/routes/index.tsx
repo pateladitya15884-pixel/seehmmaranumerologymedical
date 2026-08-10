@@ -161,11 +161,13 @@ function Index() {
             <div className="relative mx-auto max-w-md lg:max-w-none">
               <div className="absolute -inset-4 rounded-3xl bg-secondary/10 blur-2xl" />
               <div className="relative overflow-hidden rounded-3xl border-8 border-card shadow-2xl">
-                {/* Replace with real instructor image if available */}
-                <div className="aspect-[3/4] bg-primary/10 flex items-center justify-center">
-                  <GraduationCap className="h-32 w-32 text-primary/20" />
-                  <p className="absolute bottom-8 left-0 right-0 text-center font-bold text-primary">Surrjit — Instructor</p>
-                </div>
+                <img 
+                  src={surrjitAsset.url} 
+                  alt="Numerologist Surrjit" 
+                  className="aspect-[3/4] w-full object-cover object-top"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
+                <p className="absolute bottom-6 left-0 right-0 text-center font-bold text-white text-lg">Surrjit — Instructor</p>
               </div>
             </div>
           </div>
