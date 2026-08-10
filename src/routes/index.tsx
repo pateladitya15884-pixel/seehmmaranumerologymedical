@@ -101,14 +101,14 @@ function Index() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-16 pb-24 md:pt-24 md:pb-32" id="home">
+      <section className="relative overflow-hidden pt-8 pb-16 md:pt-24 md:pb-32" id="home">
         <div className="container relative z-10 mx-auto px-4">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div className="space-y-8 text-center lg:text-left">
-              <div className="inline-block rounded-full bg-secondary/10 px-4 py-1.5 text-sm font-bold text-secondary ring-1 ring-inset ring-secondary/20">
+          <div className="grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
+            <div className="flex flex-col space-y-6 text-center lg:text-left">
+              <div className="inline-block self-center rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-bold text-secondary ring-1 ring-inset ring-secondary/20 lg:self-start sm:text-sm">
                 A Complete Advanced Course • 100% FREE
               </div>
-              <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-6xl">
+              <h1 className="text-3xl font-extrabold tracking-tight text-primary sm:text-5xl lg:text-6xl">
                 Medical Astrology <br />
                 <span className="text-secondary">Advanced Course</span>
               </h1>
