@@ -295,10 +295,10 @@ function Index() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24" id="faq">
+      <section className="py-16 md:py-24" id="faq">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl space-y-12">
-            <h2 className="text-center text-3xl font-black text-primary sm:text-5xl">Frequently Asked Questions</h2>
+            <h2 className="text-center text-2xl font-black text-primary sm:text-4xl md:text-5xl">Frequently Asked Questions</h2>
             <div className="grid gap-4">
               {[
                 { q: "Is this really a full course or just a webinar?", a: "This is a 100% full advanced course. There is no sales pitch, no 'buy the course' at the end, and no hidden upsells. Our goal is to spread quality knowledge." },
@@ -306,8 +306,8 @@ function Index() {
                 { q: "Will I get a certificate?", a: "Yes, students who attend all live classes and complete the assessment will receive a professional certificate from Seehmmara Numerology." },
                 { q: "What is the duration of the course?", a: "The course spans 15+ hours of intensive live learning over multiple sessions." },
               ].map((faq, i) => (
-                <div key={i} className="rounded-2xl bg-card p-6 shadow-sm ring-1 ring-primary/5">
-                  <h3 className="text-lg font-bold text-primary">{faq.q}</h3>
+                <div key={i} className="rounded-2xl bg-card p-5 shadow-sm ring-1 ring-primary/5 sm:p-6">
+                  <h3 className="text-base font-bold text-primary sm:text-lg">{faq.q}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{faq.a}</p>
                 </div>
               ))}
