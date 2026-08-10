@@ -140,8 +140,8 @@ function Index() {
               </div>
 
               {/* Countdown Timer */}
-              <div className="flex flex-col items-center gap-4 rounded-2xl bg-card p-6 shadow-xl shadow-primary/5 ring-1 ring-primary/5 lg:items-start">
-                <p className="text-sm font-bold uppercase tracking-widest text-muted-foreground">Registration Closes In</p>
+              <div className="flex flex-col items-center gap-4 rounded-2xl bg-card p-4 shadow-xl shadow-primary/5 ring-1 ring-primary/5 sm:p-6 lg:items-start">
+                <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground sm:text-sm">Registration Closes In</p>
                 <div className="flex gap-4 sm:gap-8">
                   {[
                     { label: "Days", value: timeLeft.days },
@@ -150,7 +150,7 @@ function Index() {
                     { label: "Secs", value: timeLeft.seconds },
                   ].map((unit) => (
                     <div key={unit.label} className="text-center">
-                      <span className="text-3xl font-black text-primary sm:text-4xl">{String(unit.value).padStart(2, '0')}</span>
+                      <span className="text-2xl font-black text-primary sm:text-3xl md:text-4xl">{String(unit.value).padStart(2, '0')}</span>
                       <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">{unit.label}</p>
                     </div>
                   ))}
