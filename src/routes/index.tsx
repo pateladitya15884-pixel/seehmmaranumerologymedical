@@ -114,20 +114,30 @@ function Index() {
         <div className="container relative z-10 mx-auto px-4">
           <div className="grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
             <div className="flex flex-col space-y-6 text-center lg:text-left">
-              <div className="inline-block self-center rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-bold text-secondary ring-1 ring-inset ring-secondary/20 lg:self-start sm:text-sm">
+              <div className="inline-flex self-center rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-bold text-secondary ring-1 ring-inset ring-secondary/20 lg:self-start sm:text-sm">
                 A Complete Advanced Course • 100% FREE
               </div>
-              <h1 className="text-3xl font-extrabold tracking-tight text-primary sm:text-5xl lg:text-6xl">
+              <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl lg:text-7xl">
                 Medical Astrology <br />
                 <span className="text-secondary">Advanced Course</span>
               </h1>
-              <p className="mx-auto max-w-xl text-base text-muted-foreground sm:text-lg lg:mx-0">
-                Master the profound connection between celestial bodies and human health. 
-                <span className="block mt-2 font-bold text-primary italic">
-                  "THIS IS NOT A WEBINAR. THIS IS THE COMPLETE ADVANCED COURSE."
-                </span>
-                No sales pitch. No hidden costs. Just pure knowledge.
-              </p>
+              <div className="mx-auto max-w-xl space-y-4 lg:mx-0">
+                <div className="flex flex-col gap-2 rounded-xl border border-secondary/20 bg-secondary/5 p-4 text-center lg:text-left">
+                  <p className="text-sm font-bold text-primary sm:text-base">
+                    📅 Date: <span className="text-secondary">15th August 2026</span>
+                  </p>
+                  <p className="text-sm font-bold text-primary sm:text-base">
+                    ⏰ Time: <span className="text-secondary">11:00 AM IST</span>
+                  </p>
+                </div>
+                <p className="text-base text-muted-foreground sm:text-lg">
+                  Master the profound connection between celestial bodies and human health. 
+                  <span className="block mt-2 font-black text-primary uppercase tracking-tight">
+                    "THIS IS NOT A WEBINAR. THIS IS THE COMPLETE ADVANCED COURSE."
+                  </span>
+                  No sales pitch. No hidden costs. Just pure knowledge.
+                </p>
+              </div>
               
               <div className="flex flex-col items-center gap-4 sm:flex-row lg:justify-start">
                 <Button size="lg" className="h-12 w-full gap-2 px-8 text-lg font-bold shadow-lg shadow-primary/20 sm:h-14 sm:w-auto" asChild>
