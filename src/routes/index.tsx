@@ -394,8 +394,8 @@ function Index() {
                   key={i} 
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.3, delay: i * 0.05 }}
+                  viewport={{ once: true, margin: "0px" }}
+                  transition={{ duration: 0.2, delay: i * 0.05 }}
                   className="rounded-2xl bg-card p-5 shadow-sm ring-1 ring-primary/5 sm:p-6"
                 >
                   <h3 className="text-base font-bold text-primary sm:text-lg">{faq.q}</h3>
