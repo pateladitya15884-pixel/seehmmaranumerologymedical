@@ -2,6 +2,15 @@
 @source "../src";
 @import "tw-animate-css";
 
+@layer base {
+  [data-lovable-badge],
+  .lovable-badge,
+  #lovable-badge {
+    display: none !important;
+  }
+}
+
+
 @custom-variant dark (&:is(.dark *));
 
 /*
