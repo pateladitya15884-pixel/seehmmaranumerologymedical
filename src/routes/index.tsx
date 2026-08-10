@@ -29,22 +29,26 @@ function Index() {
   const register = useServerFn(registerForCourse);
   const [isPending, setIsPending] = useState(false);
   const [formData, setFormData] = useState({ name: "", phone: "", email: "", city: "" });
-  const [timeLeft, setTimeLeft] = useState({ days: 3, hours: 12, minutes: 45, seconds: 0 });
+  const courseDate = new Date("2026-08-15T11:00:00");
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   const [isRegistered, setIsRegistered] = useState(false);
   const [whatsappLink, setWhatsappLink] = useState("");
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        let { days, hours, minutes, seconds } = prev;
-        if (seconds > 0) seconds--;
-        else if (minutes > 0) { minutes--; seconds = 59; }
-        else if (hours > 0) { hours--; minutes = 59; seconds = 59; }
-        else if (days > 0) { days--; hours = 23; minutes = 59; seconds = 59; }
-        return { days, hours, minutes, seconds };
-      });
-    }, 1000);
+    const calculateTimeLeft = () => {
+      const difference = +courseDate - +new Date();
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60),
+        });
+      }
+    };
+    calculateTimeLeft();
+    const timer = setInterval(calculateTimeLeft, 1000);
     return () => clearInterval(timer);
   }, []);
 
@@ -73,16 +77,16 @@ function Index() {
   return (
     <div className="min-h-screen bg-background font-sans selection:bg-secondary/30">
       {/* Disclaimer Bar */}
-      <div className="sticky top-0 z-50 bg-primary py-2 text-center text-xs font-bold tracking-wider text-primary-foreground sm:text-sm">
+      <div className="bg-primary py-2.5 text-center text-[10px] font-black uppercase tracking-[0.2em] text-primary-foreground sm:text-xs">
         ⚠️ THIS IS A FULL ADVANCED COURSE — NOT A FREE WEBINAR
       </div>
 
       {/* Header */}
-      <header className="sticky top-8 z-40 border-b bg-card/80 backdrop-blur-md transition-all duration-300">
+      <header className="sticky top-0 z-40 border-b bg-card/80 backdrop-blur-md transition-all duration-300">
         <div className="container mx-auto flex items-center justify-between px-4 py-3 sm:py-4">
           <div className="flex items-center gap-2 sm:gap-3">
             <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-10 w-10 object-contain bg-white rounded-full p-1 shadow-sm sm:h-12 sm:w-12" />
-            <span className="text-lg font-bold tracking-tight text-primary sm:text-xl">Seehmmara</span>
+            <span className="text-xl font-black tracking-tighter text-primary sm:text-2xl">SEEHMMARA</span>
           </div>
           <nav className="hidden items-center gap-6 lg:flex xl:gap-8">
             {["Home", "About", "Curriculum", "FAQ"].map((item) => (
@@ -93,7 +97,7 @@ function Index() {
           </nav>
           <div className="flex items-center gap-2 sm:gap-4">
             <Button variant="outline" size="sm" className="hidden gap-2 border-primary/20 hover:bg-primary/5 sm:flex" asChild>
-              <a href="https://wa.me/919999999999">
+              <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="h-4 w-4" />
                 <span>Support</span>
               </a>
@@ -110,20 +114,30 @@ function Index() {
         <div className="container relative z-10 mx-auto px-4">
           <div className="grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
             <div className="flex flex-col space-y-6 text-center lg:text-left">
-              <div className="inline-block self-center rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-bold text-secondary ring-1 ring-inset ring-secondary/20 lg:self-start sm:text-sm">
+              <div className="inline-flex self-center rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-bold text-secondary ring-1 ring-inset ring-secondary/20 lg:self-start sm:text-sm">
                 A Complete Advanced Course • 100% FREE
               </div>
-              <h1 className="text-3xl font-extrabold tracking-tight text-primary sm:text-5xl lg:text-6xl">
+              <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl lg:text-7xl">
                 Medical Astrology <br />
                 <span className="text-secondary">Advanced Course</span>
               </h1>
-              <p className="mx-auto max-w-xl text-base text-muted-foreground sm:text-lg lg:mx-0">
-                Master the profound connection between celestial bodies and human health. 
-                <span className="block mt-2 font-bold text-primary italic">
-                  "THIS IS NOT A WEBINAR. THIS IS THE COMPLETE ADVANCED COURSE."
-                </span>
-                No sales pitch. No hidden costs. Just pure knowledge.
-              </p>
+              <div className="mx-auto max-w-xl space-y-4 lg:mx-0">
+                <div className="flex flex-col gap-2 rounded-xl border border-secondary/20 bg-secondary/5 p-4 text-center lg:text-left">
+                  <p className="text-sm font-bold text-primary sm:text-base">
+                    📅 Date: <span className="text-secondary">15th August 2026</span>
+                  </p>
+                  <p className="text-sm font-bold text-primary sm:text-base">
+                    ⏰ Time: <span className="text-secondary">11:00 AM IST</span>
+                  </p>
+                </div>
+                <p className="text-base text-muted-foreground sm:text-lg">
+                  Master the profound connection between celestial bodies and human health. 
+                  <span className="block mt-2 font-black text-primary uppercase tracking-tight">
+                    "THIS IS NOT A WEBINAR. THIS IS THE COMPLETE ADVANCED COURSE."
+                  </span>
+                  No sales pitch. No hidden costs. Just pure knowledge.
+                </p>
+              </div>
               
               <div className="flex flex-col items-center gap-4 sm:flex-row lg:justify-start">
                 <Button size="lg" className="h-12 w-full gap-2 px-8 text-lg font-bold shadow-lg shadow-primary/20 sm:h-14 sm:w-auto" asChild>
@@ -201,7 +215,7 @@ function Index() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl space-y-12">
             <div className="text-center space-y-4">
-              <h2 className="text-2xl font-black text-primary sm:text-4xl md:text-5xl">Why This Course?</h2>
+              <h2 className="text-4xl font-black text-primary sm:text-5xl md:text-6xl">Why This Course?</h2>
               <p className="text-base text-muted-foreground italic sm:text-lg">"Complete Course — No hidden upsells, no sales pitch during class"</p>
             </div>
 
@@ -303,13 +317,13 @@ function Index() {
       <section className="py-16 md:py-24" id="faq">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl space-y-12">
-            <h2 className="text-center text-2xl font-black text-primary sm:text-4xl md:text-5xl">Frequently Asked Questions</h2>
+            <h2 className="text-center text-3xl font-black text-primary sm:text-4xl md:text-5xl">Frequently Asked Questions</h2>
             <div className="grid gap-4">
               {[
                 { q: "Is this really a full course or just a webinar?", a: "This is a 100% full advanced course. There is no sales pitch, no 'buy the course' at the end, and no hidden upsells. Our goal is to spread quality knowledge." },
                 { q: "Is the course really free?", a: "Yes, this batch is completely free as part of our mission to empower astrologers and healers." },
-                { q: "Will I get a certificate?", a: "Yes, students who attend all live classes and complete the assessment will receive a professional certificate from Seehmmara Numerology." },
-                { q: "What is the duration of the course?", a: "The course spans 15+ hours of intensive live learning over multiple sessions." },
+                { q: "Will I get a certificate?", a: "Yes, students who attend all live classes will receive a professional certificate from Seehmmara Numerology." },
+                { q: "What is the duration of the course?", a: "The course spans 15+ hours of intensive live learning over multiple sessions starting 15th August." },
               ].map((faq, i) => (
                 <div key={i} className="rounded-2xl bg-card p-5 shadow-sm ring-1 ring-primary/5 sm:p-6">
                   <h3 className="text-base font-bold text-primary sm:text-lg">{faq.q}</h3>
@@ -328,7 +342,7 @@ function Index() {
             <div className="space-y-6">
               <div className="flex items-center gap-3">
                 <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-10 w-10 object-contain bg-white rounded-full p-1 sm:h-12 sm:w-12" />
-                <span className="text-xl font-bold tracking-tight">Seehmmara</span>
+                <span className="text-2xl font-black tracking-tighter">SEEHMMARA</span>
               </div>
               <p className="text-sm leading-relaxed opacity-70">
                 Empowering healers and astrologers through authentic, advanced knowledge in Medical Astrology and Numerology.
@@ -348,7 +362,6 @@ function Index() {
               <div className="space-y-4">
                 <h4 className="text-sm font-black uppercase tracking-widest text-secondary">Contact Us</h4>
                 <div className="space-y-2 text-sm opacity-70">
-                  <p>Email: info@seehmmara.com</p>
                   <p>Support: +91 99999 99999</p>
                 </div>
               </div>
