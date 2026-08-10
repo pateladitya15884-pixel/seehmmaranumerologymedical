@@ -215,7 +215,7 @@ function Index() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl space-y-12">
             <div className="text-center space-y-4">
-              <h2 className="text-2xl font-black text-primary sm:text-4xl md:text-5xl">Why This Course?</h2>
+              <h2 className="text-3xl font-black text-primary sm:text-4xl md:text-5xl">Why This Course?</h2>
               <p className="text-base text-muted-foreground italic sm:text-lg">"Complete Course — No hidden upsells, no sales pitch during class"</p>
             </div>
 
