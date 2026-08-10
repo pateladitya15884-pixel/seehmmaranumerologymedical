@@ -324,30 +324,34 @@ function Index() {
       {/* Footer */}
       <footer className="bg-primary pt-16 pb-8 text-primary-foreground">
         <div className="container mx-auto px-4">
-          <div className="grid gap-12 border-b border-primary-foreground/10 pb-12 md:grid-cols-3">
+          <div className="grid gap-10 border-b border-primary-foreground/10 pb-12 sm:grid-cols-2 lg:grid-cols-3">
             <div className="space-y-6">
               <div className="flex items-center gap-3">
-                <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-12 w-12 object-contain bg-white rounded-full p-1" />
-                <span className="text-xl font-bold tracking-tight">Seehmmara Numerology</span>
+                <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-10 w-10 object-contain bg-white rounded-full p-1 sm:h-12 sm:w-12" />
+                <span className="text-xl font-bold tracking-tight">Seehmmara</span>
               </div>
-              <p className="text-sm opacity-70">
+              <p className="text-sm leading-relaxed opacity-70">
                 Empowering healers and astrologers through authentic, advanced knowledge in Medical Astrology and Numerology.
               </p>
             </div>
-            <div className="space-y-4">
-              <h4 className="text-sm font-black uppercase tracking-widest text-secondary">Quick Links</h4>
-              <nav className="flex flex-col gap-2 text-sm opacity-70">
-                {["Home", "About", "Curriculum", "FAQ"].map((item) => (
-                  <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-secondary hover:opacity-100 transition-colors">
-                    {item}
-                  </a>
-                ))}
-              </nav>
-            </div>
-            <div className="space-y-4">
-              <h4 className="text-sm font-black uppercase tracking-widest text-secondary">Contact Us</h4>
-              <p className="text-sm opacity-70">Email: info@seehmmara.com</p>
-              <p className="text-sm opacity-70">Support: +91 99999 99999</p>
+            <div className="grid grid-cols-2 gap-8 sm:col-span-1 lg:col-span-2 lg:grid-cols-2">
+              <div className="space-y-4">
+                <h4 className="text-sm font-black uppercase tracking-widest text-secondary">Quick Links</h4>
+                <nav className="flex flex-col gap-2 text-sm opacity-70">
+                  {["Home", "About", "Curriculum", "FAQ"].map((item) => (
+                    <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-secondary hover:opacity-100 transition-colors">
+                      {item}
+                    </a>
+                  ))}
+                </nav>
+              </div>
+              <div className="space-y-4">
+                <h4 className="text-sm font-black uppercase tracking-widest text-secondary">Contact Us</h4>
+                <div className="space-y-2 text-sm opacity-70">
+                  <p>Email: info@seehmmara.com</p>
+                  <p>Support: +91 99999 99999</p>
+                </div>
+              </div>
             </div>
           </div>
           <div className="flex flex-col items-center justify-between gap-4 pt-8 text-[10px] font-bold uppercase tracking-widest opacity-40 sm:flex-row">
