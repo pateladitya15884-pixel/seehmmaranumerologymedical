@@ -466,9 +466,14 @@ function Index() {
       </footer>
       
       {/* Sticky Mobile CTA */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 border-t bg-card/80 p-4 backdrop-blur-md md:hidden">
-        <Button className="w-full h-12 font-bold" asChild>
-          <a href="#register">Register for FREE Course</a>
+      <div className="fixed bottom-0 left-0 right-0 z-40 flex items-center gap-2 border-t bg-card/80 p-3 backdrop-blur-md md:hidden">
+        <Button variant="outline" className="h-12 w-12 shrink-0 p-0 rounded-full border-primary/20" asChild title="Call Now">
+          <a href="tel:+918559091319">
+            <Phone className="h-5 w-5 text-primary" />
+          </a>
+        </Button>
+        <Button className="flex-1 h-12 font-bold shadow-lg shadow-primary/10" asChild>
+          <a href="#register">Register for FREE</a>
         </Button>
       </div>
     </div>
