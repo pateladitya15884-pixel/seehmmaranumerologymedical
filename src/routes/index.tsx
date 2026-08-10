@@ -253,36 +253,48 @@ function Index() {
                     <p className="text-sm text-muted-foreground sm:text-base">Limited spots available for this batch.</p>
                   </div>
                   <form onSubmit={handleSubmit} className="space-y-4">
-                    <Input 
-                      placeholder="Full Name" 
-                      required 
-                      value={formData.name}
-                      onChange={e => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                      className="h-12 bg-muted/50 border-transparent focus:bg-card"
-                    />
-                    <Input 
-                      placeholder="WhatsApp Phone Number" 
-                      type="tel" 
-                      required 
-                      value={formData.phone}
-                      onChange={e => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                      className="h-12 bg-muted/50 border-transparent focus:bg-card"
-                    />
-                    <Input 
-                      placeholder="Email Address" 
-                      type="email" 
-                      required 
-                      value={formData.email}
-                      onChange={e => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                      className="h-12 bg-muted/50 border-transparent focus:bg-card"
-                    />
-                    <Input 
-                      placeholder="City" 
-                      required 
-                      value={formData.city}
-                      onChange={e => setFormData(prev => ({ ...prev, city: e.target.value }))}
-                      className="h-12 bg-muted/50 border-transparent focus:bg-card"
-                    />
+                    <div className="space-y-2">
+                      <Input 
+                        placeholder="Full Name" 
+                        required 
+                        aria-label="Full Name"
+                        value={formData.name}
+                        onChange={e => setFormData(prev => ({ ...prev, name: e.target.value }))}
+                        className="h-12 bg-muted/50 border-transparent focus:bg-card"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Input 
+                        placeholder="WhatsApp Phone Number" 
+                        type="tel" 
+                        required 
+                        aria-label="WhatsApp Phone Number"
+                        value={formData.phone}
+                        onChange={e => setFormData(prev => ({ ...prev, phone: e.target.value }))}
+                        className="h-12 bg-muted/50 border-transparent focus:bg-card"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Input 
+                        placeholder="Email Address" 
+                        type="email" 
+                        required 
+                        aria-label="Email Address"
+                        value={formData.email}
+                        onChange={e => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                        className="h-12 bg-muted/50 border-transparent focus:bg-card"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Input 
+                        placeholder="City" 
+                        required 
+                        aria-label="City"
+                        value={formData.city}
+                        onChange={e => setFormData(prev => ({ ...prev, city: e.target.value }))}
+                        className="h-12 bg-muted/50 border-transparent focus:bg-card"
+                      />
+                    </div>
                     <Button type="submit" size="lg" className="w-full h-14 text-lg font-bold mt-4" disabled={isPending}>
                       {isPending ? "Registering..." : "Join The Advanced Course"}
                     </Button>
