@@ -317,7 +317,7 @@ function Index() {
       <section className="py-16 md:py-24" id="faq">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl space-y-12">
-            <h2 className="text-center text-2xl font-black text-primary sm:text-4xl md:text-5xl">Frequently Asked Questions</h2>
+            <h2 className="text-center text-3xl font-black text-primary sm:text-4xl md:text-5xl">Frequently Asked Questions</h2>
             <div className="grid gap-4">
               {[
                 { q: "Is this really a full course or just a webinar?", a: "This is a 100% full advanced course. There is no sales pitch, no 'buy the course' at the end, and no hidden upsells. Our goal is to spread quality knowledge." },
