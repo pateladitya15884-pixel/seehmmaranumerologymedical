@@ -327,9 +327,9 @@ function Index() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "0px" }}
                   transition={{ duration: 0.2, delay: i * 0.05 }}
-                  className="rounded-2xl bg-card p-6 shadow-md shadow-primary/5 border border-primary/5 transition-all hover:shadow-lg sm:p-8"
+                  className="rounded-2xl bg-card p-6 shadow-md shadow-primary/5 border border-white/5 transition-all hover:shadow-lg sm:p-8"
                 >
-                  <h3 className="text-base font-bold text-primary sm:text-lg">{faq.q}</h3>
+                  <h3 className="text-base font-bold text-accent sm:text-lg">{faq.q}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{faq.a}</p>
                 </motion.div>
               ))}
@@ -345,7 +345,7 @@ function Index() {
             <div className="space-y-6">
               <div className="flex items-center gap-3">
                 <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-10 w-10 object-contain bg-white rounded-full p-1 sm:h-12 sm:w-12" />
-                <span className="text-2xl font-black tracking-tighter text-secondary">SEEHMMARA NUMEROLOGY</span>
+                <span className="text-2xl font-black tracking-tighter text-accent">SEEHMMARA NUMEROLOGY</span>
               </div>
               <p className="text-sm leading-relaxed opacity-70">
                 Empowering healers and astrologers through authentic, advanced knowledge in Medical Astrology and Numerology.
@@ -353,7 +353,7 @@ function Index() {
             </div>
             <div className="grid grid-cols-2 gap-8 sm:col-span-1 lg:col-span-2 lg:grid-cols-2">
               <div className="space-y-4">
-                <h4 className="text-sm font-black uppercase tracking-widest text-secondary">Quick Links</h4>
+                <h4 className="text-sm font-black uppercase tracking-widest text-accent">Quick Links</h4>
                 <nav className="flex flex-col gap-2 text-sm opacity-70">
                   {["Home", "About", "Curriculum", "FAQ"].map((item) => (
                     <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-secondary hover:opacity-100 transition-colors">
@@ -363,14 +363,14 @@ function Index() {
                 </nav>
               </div>
               <div className="space-y-4">
-                <h4 className="text-sm font-black uppercase tracking-widest text-secondary">Contact Us</h4>
+                <h4 className="text-sm font-black uppercase tracking-widest text-accent">Contact Us</h4>
                 <div className="space-y-2 text-sm opacity-70">
                   <p>Email: seehmmaranumerology@gmail.com</p>
                   <p>
-                    WhatsApp: <a href="https://wa.me/918559091319" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors underline decoration-secondary/30 underline-offset-4">+91 85590 91319</a>
+                    WhatsApp: <a href="https://wa.me/918559091319" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors underline decoration-accent/30 underline-offset-4">+91 85590 91319</a>
                   </p>
                   <p>
-                    Call: <a href="tel:+918559091319" className="hover:text-secondary transition-colors underline decoration-secondary/30 underline-offset-4">+91 85590 91319</a>
+                    Call: <a href="tel:+918559091319" className="hover:text-accent transition-colors underline decoration-accent/30 underline-offset-4">+91 85590 91319</a>
                   </p>
                 </div>
               </div>
@@ -390,7 +390,7 @@ function Index() {
       <div className="fixed bottom-0 left-0 right-0 z-40 flex items-center gap-2 border-t bg-card/80 p-3 backdrop-blur-md md:hidden">
         <Button variant="outline" className="h-12 w-12 shrink-0 p-0 rounded-full border-primary/20" asChild title="Call Now">
           <a href="tel:+918559091319">
-            <Phone className="h-5 w-5 text-primary" />
+            <Phone className="h-5 w-5 text-foreground" />
           </a>
         </Button>
         <Button className="flex-1 h-12 font-bold shadow-lg shadow-primary/10" asChild>
