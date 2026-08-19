@@ -223,13 +223,13 @@ function Index() {
             className="mx-auto max-w-7xl space-y-12"
           >
             <div className="text-center space-y-4">
-              <h2 className="text-4xl font-black text-primary sm:text-5xl md:text-6xl tracking-tight">Why This Course?</h2>
+              <h2 className="text-4xl font-black text-foreground sm:text-5xl md:text-6xl tracking-tight">Why This Course?</h2>
               <p className="text-base text-muted-foreground italic sm:text-xl max-w-2xl mx-auto font-medium">"Complete Course — No hidden upsells, no sales pitch during class"</p>
             </div>
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              <div className="flex flex-col space-y-4 rounded-3xl bg-card p-8 shadow-xl shadow-primary/5 border border-primary/5 sm:p-10 transition-transform hover:-translate-y-1 duration-300">
-                <h3 className="text-lg font-bold text-primary sm:text-xl">What is Medical Astrology?</h3>
+              <div className="flex flex-col space-y-4 rounded-3xl bg-card p-8 shadow-xl shadow-primary/5 border border-white/5 sm:p-10 transition-transform hover:-translate-y-1 duration-300">
+                <h3 className="text-lg font-bold text-accent sm:text-xl">What is Medical Astrology?</h3>
                 <div className="flex-1 space-y-4">
                   <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
                     Medical Astrology is an ancient science that associates various parts of the body, diseases, and drugs as under the influence of the sun, moon, and planets, along with the twelve astrological signs.
@@ -240,8 +240,8 @@ function Index() {
                 </div>
               </div>
 
-              <div className="flex flex-col space-y-4 rounded-3xl bg-card p-8 shadow-xl shadow-primary/5 border border-primary/5 border-t-4 border-t-secondary sm:p-10 transition-transform hover:-translate-y-1 duration-300">
-                <h3 className="text-lg font-bold text-primary sm:text-xl">Advanced Level Curriculum</h3>
+              <div className="flex flex-col space-y-4 rounded-3xl bg-card p-8 shadow-xl shadow-primary/5 border border-white/5 border-t-4 border-t-primary sm:p-10 transition-transform hover:-translate-y-1 duration-300">
+                <h3 className="text-lg font-bold text-accent sm:text-xl">Advanced Level Curriculum</h3>
                 <div className="flex-1 space-y-3">
                   <Feature>Understanding Body Parts & Planets</Feature>
                   <Feature>Disease Identification in Charts</Feature>
@@ -251,8 +251,8 @@ function Index() {
                 </div>
               </div>
 
-              <div className="flex flex-col space-y-4 rounded-3xl bg-card p-8 shadow-xl shadow-primary/5 border border-primary/5 border-l-4 border-l-secondary sm:p-10 transition-transform hover:-translate-y-1 duration-300">
-                <h3 className="text-lg font-bold text-primary sm:text-xl">Instructor: Surrjit</h3>
+              <div className="flex flex-col space-y-4 rounded-3xl bg-card p-8 shadow-xl shadow-primary/5 border border-white/5 border-l-4 border-l-primary sm:p-10 transition-transform hover:-translate-y-1 duration-300">
+                <h3 className="text-lg font-bold text-accent sm:text-xl">Instructor: Surrjit</h3>
                 <div className="flex-1 space-y-4">
                   <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
                     With years of experience in Numerology and Astrology, Surrjit has mentored thousands of students globally. 
@@ -285,10 +285,10 @@ function Index() {
             transition={{ duration: 0.3, ease: "easeOut" }}
             className="mx-auto max-w-2xl text-center space-y-8"
           >
-            <div className="rounded-[2.5rem] bg-card p-10 shadow-2xl shadow-primary/10 border border-primary/5 sm:p-16">
+            <div className="rounded-[2.5rem] bg-card p-10 shadow-2xl shadow-primary/10 border border-white/5 sm:p-16">
               <div className="space-y-6">
                 <div className="space-y-2">
-                  <h2 className="text-3xl font-black text-primary sm:text-4xl">Join the Official Group</h2>
+                  <h2 className="text-3xl font-black text-foreground sm:text-4xl">Join the Official Group</h2>
                   <p className="text-lg text-muted-foreground">Click below to join the WhatsApp group and receive all class links, notes, and session updates directly.</p>
                 </div>
                 
@@ -312,7 +312,7 @@ function Index() {
       <section className="py-16 md:py-24" id="faq">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl space-y-12">
-            <h2 className="text-center text-3xl font-black text-primary sm:text-4xl md:text-5xl">Frequently Asked Questions</h2>
+            <h2 className="text-center text-3xl font-black text-foreground sm:text-4xl md:text-5xl">Frequently Asked Questions</h2>
             <div className="grid gap-4">
               {[
                 { q: "Is this really a full course or just a webinar?", a: "This is a 100% full advanced course. There is no sales pitch, no 'buy the course' at the end, and no hidden upsells. Our goal is to spread quality knowledge." },
