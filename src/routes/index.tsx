@@ -61,8 +61,8 @@ function Index() {
   return (
     <div className="min-h-screen bg-background font-sans selection:bg-secondary/30">
       {/* Disclaimer Bar */}
-      <div className="bg-primary py-2.5 text-center text-[10px] font-black uppercase tracking-[0.2em] text-primary-foreground sm:text-xs">
-        ⚠️ THIS IS A FULL ADVANCED COURSE — NOT A FREE WEBINAR
+      <div className="bg-primary py-2.5 text-center text-[10px] font-black uppercase tracking-[0.3em] text-primary-foreground sm:text-xs">
+        <span className="opacity-80">⚠️ THIS IS A FULL ADVANCED COURSE — NOT A FREE WEBINAR</span>
       </div>
 
       {/* Header */}
@@ -100,9 +100,13 @@ function Index() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-8 pb-16 md:pt-24 md:pb-32" id="home">
+      <section className="relative overflow-hidden pt-12 pb-20 md:pt-28 md:pb-36 bg-linear-to-b from-background via-background/50 to-muted/30" id="home">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none overflow-hidden">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-3xl opacity-50 translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl opacity-50 -translate-x-1/2 translate-y-1/2" />
+        </div>
         <div className="container relative z-10 mx-auto px-4">
-          <div className="flex flex-col items-center gap-8 lg:gap-12 max-w-7xl mx-auto">
+          <div className="flex flex-col items-center gap-10 lg:gap-14 max-w-7xl mx-auto">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -110,8 +114,8 @@ function Index() {
               transition={{ duration: 0.3, ease: "easeOut" }}
               className="flex flex-col space-y-6 text-center"
             >
-              <div className="inline-flex self-center rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-bold text-secondary ring-1 ring-inset ring-secondary/20 sm:text-sm">
-                A Complete Advanced Course • 100% FREE
+              <div className="inline-flex self-center rounded-full bg-secondary/15 px-5 py-2 text-xs font-black text-primary border border-secondary/30 shadow-sm sm:text-sm tracking-wide">
+                ✨ COMPLETE ADVANCED COURSE • 100% FREE
               </div>
               <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl lg:text-7xl">
                 Medical Astrology <br />
@@ -161,18 +165,18 @@ function Index() {
               </div>
 
               {/* Countdown Timer */}
-              <div className="flex flex-col items-center gap-4 rounded-2xl bg-card p-4 shadow-xl shadow-primary/5 ring-1 ring-primary/5 sm:p-6 mx-auto">
-                <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground sm:text-sm">Registration Closes In</p>
-                <div className="flex gap-4 sm:gap-8">
+              <div className="flex flex-col items-center gap-6 rounded-3xl bg-card p-6 shadow-2xl shadow-primary/5 border border-primary/5 sm:p-8 mx-auto max-w-md w-full">
+                <p className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground/80 sm:text-sm">Registration Closes In</p>
+                <div className="flex justify-center gap-6 sm:gap-10">
                   {[
                     { label: "Days", value: timeLeft.days },
                     { label: "Hours", value: timeLeft.hours },
                     { label: "Mins", value: timeLeft.minutes },
                     { label: "Secs", value: timeLeft.seconds },
                   ].map((unit) => (
-                    <div key={unit.label} className="text-center">
-                      <span className="text-2xl font-black text-primary sm:text-3xl md:text-4xl">{String(unit.value).padStart(2, '0')}</span>
-                      <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">{unit.label}</p>
+                    <div key={unit.label} className="text-center min-w-[60px]">
+                      <span className="text-3xl font-black text-primary sm:text-4xl tabular-nums drop-shadow-sm">{String(unit.value).padStart(2, '0')}</span>
+                      <p className="mt-1 text-[10px] font-extrabold uppercase tracking-widest text-secondary">{unit.label}</p>
                     </div>
                   ))}
                 </div>
