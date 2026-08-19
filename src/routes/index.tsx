@@ -193,8 +193,9 @@ function Index() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "0px" }}
         transition={{ duration: 0.3, ease: "easeOut" }}
-        className="bg-primary py-10 text-primary-foreground sm:py-12"
+        className="bg-primary py-14 text-primary-foreground sm:py-16 relative overflow-hidden"
       >
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--color-secondary)_0%,_transparent_70%)]" />
         <div className="container mx-auto grid grid-cols-2 gap-y-10 gap-x-4 px-4 text-center md:grid-cols-4">
           {[
             { label: "Live Classes", value: "20+" },
@@ -221,12 +222,12 @@ function Index() {
             className="mx-auto max-w-7xl space-y-12"
           >
             <div className="text-center space-y-4">
-              <h2 className="text-4xl font-black text-primary sm:text-5xl md:text-6xl">Why This Course?</h2>
-              <p className="text-base text-muted-foreground italic sm:text-lg">"Complete Course — No hidden upsells, no sales pitch during class"</p>
+              <h2 className="text-4xl font-black text-primary sm:text-5xl md:text-6xl tracking-tight">Why This Course?</h2>
+              <p className="text-base text-muted-foreground italic sm:text-xl max-w-2xl mx-auto font-medium">"Complete Course — No hidden upsells, no sales pitch during class"</p>
             </div>
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              <div className="flex flex-col space-y-4 rounded-2xl bg-card p-6 shadow-sm ring-1 ring-primary/5 sm:p-8">
+              <div className="flex flex-col space-y-4 rounded-3xl bg-card p-8 shadow-xl shadow-primary/5 border border-primary/5 sm:p-10 transition-transform hover:-translate-y-1 duration-300">
                 <h3 className="text-lg font-bold text-primary sm:text-xl">What is Medical Astrology?</h3>
                 <div className="flex-1 space-y-4">
                   <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
@@ -238,7 +239,7 @@ function Index() {
                 </div>
               </div>
 
-              <div className="flex flex-col space-y-4 rounded-2xl bg-card p-6 shadow-sm ring-1 ring-primary/5 border-t-4 border-secondary sm:p-8">
+              <div className="flex flex-col space-y-4 rounded-3xl bg-card p-8 shadow-xl shadow-primary/5 border border-primary/5 border-t-4 border-t-secondary sm:p-10 transition-transform hover:-translate-y-1 duration-300">
                 <h3 className="text-lg font-bold text-primary sm:text-xl">Advanced Level Curriculum</h3>
                 <div className="flex-1 space-y-3">
                   <Feature>Understanding Body Parts & Planets</Feature>
@@ -249,7 +250,7 @@ function Index() {
                 </div>
               </div>
 
-              <div className="flex flex-col space-y-4 rounded-2xl bg-card p-6 shadow-sm ring-1 ring-primary/5 border-l-4 border-secondary sm:p-8">
+              <div className="flex flex-col space-y-4 rounded-3xl bg-card p-8 shadow-xl shadow-primary/5 border border-primary/5 border-l-4 border-l-secondary sm:p-10 transition-transform hover:-translate-y-1 duration-300">
                 <h3 className="text-lg font-bold text-primary sm:text-xl">Instructor: Surrjit</h3>
                 <div className="flex-1 space-y-4">
                   <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
@@ -283,7 +284,7 @@ function Index() {
             transition={{ duration: 0.3, ease: "easeOut" }}
             className="mx-auto max-w-2xl text-center space-y-8"
           >
-            <div className="rounded-3xl bg-card p-8 shadow-2xl shadow-primary/10 ring-1 ring-primary/5 sm:p-12">
+            <div className="rounded-[2.5rem] bg-card p-10 shadow-2xl shadow-primary/10 border border-primary/5 sm:p-16">
               <div className="space-y-6">
                 <div className="space-y-2">
                   <h2 className="text-3xl font-black text-primary sm:text-4xl">Join the Official Group</h2>
