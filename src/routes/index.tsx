@@ -115,7 +115,7 @@ function Index() {
               transition={{ duration: 0.3, ease: "easeOut" }}
               className="flex flex-col space-y-6 text-center"
             >
-              <div className="inline-flex self-center rounded-full bg-secondary/15 px-5 py-2 text-xs font-black text-primary border border-secondary/30 shadow-sm sm:text-sm tracking-wide">
+              <div className="inline-flex self-center rounded-full bg-primary/10 px-5 py-2 text-xs font-black text-primary border border-primary/20 shadow-sm sm:text-sm tracking-wide">
                 ✨ COMPLETE ADVANCED COURSE • 100% FREE
               </div>
               <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-7xl">
@@ -123,12 +123,12 @@ function Index() {
                 <span className="text-primary drop-shadow-[0_0_20px_rgba(var(--primary),0.3)]">Advanced Course</span>
               </h1>
               <div className="mx-auto max-w-xl space-y-4">
-                <div className="flex flex-col gap-2 rounded-xl border border-secondary/20 bg-secondary/5 p-4 text-center">
-                  <p className="text-sm font-bold text-primary sm:text-base">
-                    📅 Date: <span className="text-secondary">15th August 2026</span>
+                <div className="flex flex-col gap-2 rounded-xl border border-primary/20 bg-primary/5 p-4 text-center">
+                  <p className="text-sm font-bold text-foreground sm:text-base">
+                    📅 Date: <span className="text-accent">15th August 2026</span>
                   </p>
-                  <p className="text-sm font-bold text-primary sm:text-base">
-                    ⏰ Time: <span className="text-secondary">09:00 PM IST</span>
+                  <p className="text-sm font-bold text-foreground sm:text-base">
+                    ⏰ Time: <span className="text-accent">09:00 PM IST</span>
                   </p>
                 </div>
                 <p className="text-base text-muted-foreground sm:text-lg">
@@ -176,8 +176,8 @@ function Index() {
                     { label: "Secs", value: timeLeft.seconds },
                   ].map((unit) => (
                     <div key={unit.label} className="text-center min-w-[60px]">
-                      <span className="text-3xl font-black text-primary sm:text-4xl tabular-nums drop-shadow-sm">{String(unit.value).padStart(2, '0')}</span>
-                      <p className="mt-1 text-[10px] font-extrabold uppercase tracking-widest text-secondary">{unit.label}</p>
+                      <span className="text-3xl font-black text-foreground sm:text-4xl tabular-nums drop-shadow-sm">{String(unit.value).padStart(2, '0')}</span>
+                      <p className="mt-1 text-[10px] font-extrabold uppercase tracking-widest text-primary">{unit.label}</p>
                     </div>
                   ))}
                 </div>
@@ -196,7 +196,7 @@ function Index() {
         transition={{ duration: 0.3, ease: "easeOut" }}
         className="bg-primary py-14 text-primary-foreground sm:py-16 relative overflow-hidden"
       >
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--color-secondary)_0%,_transparent_70%)]" />
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--color-accent)_0%,_transparent_70%)]" />
         <div className="container mx-auto grid grid-cols-2 gap-y-10 gap-x-4 px-4 text-center md:grid-cols-4">
           {[
             { label: "Live Classes", value: "20+" },
@@ -205,7 +205,7 @@ function Index() {
             { label: "Rating", value: "4.9/5" },
           ].map((stat) => (
             <div key={stat.label} className="space-y-1">
-              <p className="text-2xl font-black text-secondary sm:text-3xl md:text-4xl">{stat.value}</p>
+              <p className="text-2xl font-black text-accent sm:text-3xl md:text-4xl">{stat.value}</p>
               <p className="text-[10px] font-bold uppercase tracking-widest opacity-80 sm:text-xs">{stat.label}</p>
             </div>
           ))}
