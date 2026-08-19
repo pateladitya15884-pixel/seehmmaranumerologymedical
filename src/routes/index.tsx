@@ -53,7 +53,7 @@ function Index() {
 
   const Feature = ({ children }: { children: React.ReactNode }) => (
     <div className="flex items-start gap-3">
-      <CheckCircle className="mt-1 h-5 w-5 shrink-0 text-secondary" />
+      <CheckCircle className="mt-1 h-5 w-5 shrink-0 text-primary" />
       <span className="text-foreground/90">{children}</span>
     </div>
   );
@@ -66,11 +66,11 @@ function Index() {
       </div>
 
       {/* Header */}
-      <header className="sticky top-0 z-40 border-b bg-card/80 backdrop-blur-md transition-all duration-300">
+      <header className="sticky top-0 z-40 border-b border-white/5 bg-background/60 backdrop-blur-xl transition-all duration-300">
         <div className="container mx-auto flex items-center justify-between px-4 py-3 sm:py-4">
           <div className="flex items-center gap-2 sm:gap-3">
-            <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-10 w-10 object-contain bg-white rounded-full p-1 shadow-sm sm:h-12 sm:w-12" />
-            <span className="text-xl font-black tracking-tighter text-primary sm:text-2xl drop-shadow-sm">SEEHMMARA NUMEROLOGY</span>
+            <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-10 w-10 object-contain bg-white rounded-full p-1 shadow-lg sm:h-12 sm:w-12" />
+            <span className="text-xl font-black tracking-tighter text-foreground sm:text-2xl drop-shadow-sm">SEEHMMARA NUMEROLOGY</span>
           </div>
           <nav className="hidden items-center gap-6 lg:flex xl:gap-8">
             {["Home", "About", "Curriculum", "FAQ"].map((item) => (
@@ -100,10 +100,11 @@ function Index() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-12 pb-20 md:pt-28 md:pb-36 bg-linear-to-b from-background via-background/50 to-muted/30" id="home">
+      <section className="relative overflow-hidden pt-12 pb-20 md:pt-28 md:pb-36 bg-linear-to-b from-background via-primary/5 to-secondary/5" id="home">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none overflow-hidden">
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-3xl opacity-50 translate-x-1/2 -translate-y-1/2" />
-          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl opacity-50 -translate-x-1/2 translate-y-1/2" />
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl opacity-30 translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-3xl opacity-30 -translate-x-1/2 translate-y-1/2" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[120px] opacity-20" />
         </div>
         <div className="container relative z-10 mx-auto px-4">
           <div className="flex flex-col items-center gap-10 lg:gap-14 max-w-7xl mx-auto">
@@ -114,20 +115,20 @@ function Index() {
               transition={{ duration: 0.3, ease: "easeOut" }}
               className="flex flex-col space-y-6 text-center"
             >
-              <div className="inline-flex self-center rounded-full bg-secondary/15 px-5 py-2 text-xs font-black text-primary border border-secondary/30 shadow-sm sm:text-sm tracking-wide">
+              <div className="inline-flex self-center rounded-full bg-primary/10 px-5 py-2 text-xs font-black text-primary border border-primary/20 shadow-sm sm:text-sm tracking-wide">
                 ✨ COMPLETE ADVANCED COURSE • 100% FREE
               </div>
-              <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl lg:text-7xl">
+              <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-7xl">
                 Medical Astrology <br />
-                <span className="text-secondary">Advanced Course</span>
+                <span className="text-primary drop-shadow-[0_0_20px_rgba(var(--primary),0.3)]">Advanced Course</span>
               </h1>
               <div className="mx-auto max-w-xl space-y-4">
-                <div className="flex flex-col gap-2 rounded-xl border border-secondary/20 bg-secondary/5 p-4 text-center">
-                  <p className="text-sm font-bold text-primary sm:text-base">
-                    📅 Date: <span className="text-secondary">15th August 2026</span>
+                <div className="flex flex-col gap-2 rounded-xl border border-primary/20 bg-primary/5 p-4 text-center">
+                  <p className="text-sm font-bold text-foreground sm:text-base">
+                    📅 Date: <span className="text-accent">15th August 2026</span>
                   </p>
-                  <p className="text-sm font-bold text-primary sm:text-base">
-                    ⏰ Time: <span className="text-secondary">09:00 PM IST</span>
+                  <p className="text-sm font-bold text-foreground sm:text-base">
+                    ⏰ Time: <span className="text-accent">09:00 PM IST</span>
                   </p>
                 </div>
                 <p className="text-base text-muted-foreground sm:text-lg">
@@ -175,8 +176,8 @@ function Index() {
                     { label: "Secs", value: timeLeft.seconds },
                   ].map((unit) => (
                     <div key={unit.label} className="text-center min-w-[60px]">
-                      <span className="text-3xl font-black text-primary sm:text-4xl tabular-nums drop-shadow-sm">{String(unit.value).padStart(2, '0')}</span>
-                      <p className="mt-1 text-[10px] font-extrabold uppercase tracking-widest text-secondary">{unit.label}</p>
+                      <span className="text-3xl font-black text-foreground sm:text-4xl tabular-nums drop-shadow-sm">{String(unit.value).padStart(2, '0')}</span>
+                      <p className="mt-1 text-[10px] font-extrabold uppercase tracking-widest text-primary">{unit.label}</p>
                     </div>
                   ))}
                 </div>
@@ -195,7 +196,7 @@ function Index() {
         transition={{ duration: 0.3, ease: "easeOut" }}
         className="bg-primary py-14 text-primary-foreground sm:py-16 relative overflow-hidden"
       >
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--color-secondary)_0%,_transparent_70%)]" />
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--color-accent)_0%,_transparent_70%)]" />
         <div className="container mx-auto grid grid-cols-2 gap-y-10 gap-x-4 px-4 text-center md:grid-cols-4">
           {[
             { label: "Live Classes", value: "20+" },
@@ -204,7 +205,7 @@ function Index() {
             { label: "Rating", value: "4.9/5" },
           ].map((stat) => (
             <div key={stat.label} className="space-y-1">
-              <p className="text-2xl font-black text-secondary sm:text-3xl md:text-4xl">{stat.value}</p>
+              <p className="text-2xl font-black text-accent sm:text-3xl md:text-4xl">{stat.value}</p>
               <p className="text-[10px] font-bold uppercase tracking-widest opacity-80 sm:text-xs">{stat.label}</p>
             </div>
           ))}
@@ -222,13 +223,13 @@ function Index() {
             className="mx-auto max-w-7xl space-y-12"
           >
             <div className="text-center space-y-4">
-              <h2 className="text-4xl font-black text-primary sm:text-5xl md:text-6xl tracking-tight">Why This Course?</h2>
+              <h2 className="text-4xl font-black text-foreground sm:text-5xl md:text-6xl tracking-tight">Why This Course?</h2>
               <p className="text-base text-muted-foreground italic sm:text-xl max-w-2xl mx-auto font-medium">"Complete Course — No hidden upsells, no sales pitch during class"</p>
             </div>
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              <div className="flex flex-col space-y-4 rounded-3xl bg-card p-8 shadow-xl shadow-primary/5 border border-primary/5 sm:p-10 transition-transform hover:-translate-y-1 duration-300">
-                <h3 className="text-lg font-bold text-primary sm:text-xl">What is Medical Astrology?</h3>
+              <div className="flex flex-col space-y-4 rounded-3xl bg-card p-8 shadow-xl shadow-primary/5 border border-white/5 sm:p-10 transition-transform hover:-translate-y-1 duration-300">
+                <h3 className="text-lg font-bold text-accent sm:text-xl">What is Medical Astrology?</h3>
                 <div className="flex-1 space-y-4">
                   <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
                     Medical Astrology is an ancient science that associates various parts of the body, diseases, and drugs as under the influence of the sun, moon, and planets, along with the twelve astrological signs.
@@ -239,8 +240,8 @@ function Index() {
                 </div>
               </div>
 
-              <div className="flex flex-col space-y-4 rounded-3xl bg-card p-8 shadow-xl shadow-primary/5 border border-primary/5 border-t-4 border-t-secondary sm:p-10 transition-transform hover:-translate-y-1 duration-300">
-                <h3 className="text-lg font-bold text-primary sm:text-xl">Advanced Level Curriculum</h3>
+              <div className="flex flex-col space-y-4 rounded-3xl bg-card p-8 shadow-xl shadow-primary/5 border border-white/5 border-t-4 border-t-primary sm:p-10 transition-transform hover:-translate-y-1 duration-300">
+                <h3 className="text-lg font-bold text-accent sm:text-xl">Advanced Level Curriculum</h3>
                 <div className="flex-1 space-y-3">
                   <Feature>Understanding Body Parts & Planets</Feature>
                   <Feature>Disease Identification in Charts</Feature>
@@ -250,8 +251,8 @@ function Index() {
                 </div>
               </div>
 
-              <div className="flex flex-col space-y-4 rounded-3xl bg-card p-8 shadow-xl shadow-primary/5 border border-primary/5 border-l-4 border-l-secondary sm:p-10 transition-transform hover:-translate-y-1 duration-300">
-                <h3 className="text-lg font-bold text-primary sm:text-xl">Instructor: Surrjit</h3>
+              <div className="flex flex-col space-y-4 rounded-3xl bg-card p-8 shadow-xl shadow-primary/5 border border-white/5 border-l-4 border-l-primary sm:p-10 transition-transform hover:-translate-y-1 duration-300">
+                <h3 className="text-lg font-bold text-accent sm:text-xl">Instructor: Surrjit</h3>
                 <div className="flex-1 space-y-4">
                   <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
                     With years of experience in Numerology and Astrology, Surrjit has mentored thousands of students globally. 
@@ -284,10 +285,10 @@ function Index() {
             transition={{ duration: 0.3, ease: "easeOut" }}
             className="mx-auto max-w-2xl text-center space-y-8"
           >
-            <div className="rounded-[2.5rem] bg-card p-10 shadow-2xl shadow-primary/10 border border-primary/5 sm:p-16">
+            <div className="rounded-[2.5rem] bg-card p-10 shadow-2xl shadow-primary/10 border border-white/5 sm:p-16">
               <div className="space-y-6">
                 <div className="space-y-2">
-                  <h2 className="text-3xl font-black text-primary sm:text-4xl">Join the Official Group</h2>
+                  <h2 className="text-3xl font-black text-foreground sm:text-4xl">Join the Official Group</h2>
                   <p className="text-lg text-muted-foreground">Click below to join the WhatsApp group and receive all class links, notes, and session updates directly.</p>
                 </div>
                 
@@ -311,7 +312,7 @@ function Index() {
       <section className="py-16 md:py-24" id="faq">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl space-y-12">
-            <h2 className="text-center text-3xl font-black text-primary sm:text-4xl md:text-5xl">Frequently Asked Questions</h2>
+            <h2 className="text-center text-3xl font-black text-foreground sm:text-4xl md:text-5xl">Frequently Asked Questions</h2>
             <div className="grid gap-4">
               {[
                 { q: "Is this really a full course or just a webinar?", a: "This is a 100% full advanced course. There is no sales pitch, no 'buy the course' at the end, and no hidden upsells. Our goal is to spread quality knowledge." },
@@ -326,9 +327,9 @@ function Index() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "0px" }}
                   transition={{ duration: 0.2, delay: i * 0.05 }}
-                  className="rounded-2xl bg-card p-6 shadow-md shadow-primary/5 border border-primary/5 transition-all hover:shadow-lg sm:p-8"
+                  className="rounded-2xl bg-card p-6 shadow-md shadow-primary/5 border border-white/5 transition-all hover:shadow-lg sm:p-8"
                 >
-                  <h3 className="text-base font-bold text-primary sm:text-lg">{faq.q}</h3>
+                  <h3 className="text-base font-bold text-accent sm:text-lg">{faq.q}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{faq.a}</p>
                 </motion.div>
               ))}
@@ -344,7 +345,7 @@ function Index() {
             <div className="space-y-6">
               <div className="flex items-center gap-3">
                 <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-10 w-10 object-contain bg-white rounded-full p-1 sm:h-12 sm:w-12" />
-                <span className="text-2xl font-black tracking-tighter text-secondary">SEEHMMARA NUMEROLOGY</span>
+                <span className="text-2xl font-black tracking-tighter text-accent">SEEHMMARA NUMEROLOGY</span>
               </div>
               <p className="text-sm leading-relaxed opacity-70">
                 Empowering healers and astrologers through authentic, advanced knowledge in Medical Astrology and Numerology.
@@ -352,7 +353,7 @@ function Index() {
             </div>
             <div className="grid grid-cols-2 gap-8 sm:col-span-1 lg:col-span-2 lg:grid-cols-2">
               <div className="space-y-4">
-                <h4 className="text-sm font-black uppercase tracking-widest text-secondary">Quick Links</h4>
+                <h4 className="text-sm font-black uppercase tracking-widest text-accent">Quick Links</h4>
                 <nav className="flex flex-col gap-2 text-sm opacity-70">
                   {["Home", "About", "Curriculum", "FAQ"].map((item) => (
                     <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-secondary hover:opacity-100 transition-colors">
@@ -362,14 +363,14 @@ function Index() {
                 </nav>
               </div>
               <div className="space-y-4">
-                <h4 className="text-sm font-black uppercase tracking-widest text-secondary">Contact Us</h4>
+                <h4 className="text-sm font-black uppercase tracking-widest text-accent">Contact Us</h4>
                 <div className="space-y-2 text-sm opacity-70">
                   <p>Email: seehmmaranumerology@gmail.com</p>
                   <p>
-                    WhatsApp: <a href="https://wa.me/918559091319" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors underline decoration-secondary/30 underline-offset-4">+91 85590 91319</a>
+                    WhatsApp: <a href="https://wa.me/918559091319" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors underline decoration-accent/30 underline-offset-4">+91 85590 91319</a>
                   </p>
                   <p>
-                    Call: <a href="tel:+918559091319" className="hover:text-secondary transition-colors underline decoration-secondary/30 underline-offset-4">+91 85590 91319</a>
+                    Call: <a href="tel:+918559091319" className="hover:text-accent transition-colors underline decoration-accent/30 underline-offset-4">+91 85590 91319</a>
                   </p>
                 </div>
               </div>
@@ -389,7 +390,7 @@ function Index() {
       <div className="fixed bottom-0 left-0 right-0 z-40 flex items-center gap-2 border-t bg-card/80 p-3 backdrop-blur-md md:hidden">
         <Button variant="outline" className="h-12 w-12 shrink-0 p-0 rounded-full border-primary/20" asChild title="Call Now">
           <a href="tel:+918559091319">
-            <Phone className="h-5 w-5 text-primary" />
+            <Phone className="h-5 w-5 text-foreground" />
           </a>
         </Button>
         <Button className="flex-1 h-12 font-bold shadow-lg shadow-primary/10" asChild>
