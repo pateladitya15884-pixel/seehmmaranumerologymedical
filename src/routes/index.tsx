@@ -53,7 +53,7 @@ function Index() {
 
   const Feature = ({ children }: { children: React.ReactNode }) => (
     <div className="flex items-start gap-3">
-      <CheckCircle className="mt-1 h-5 w-5 shrink-0 text-secondary" />
+      <CheckCircle className="mt-1 h-5 w-5 shrink-0 text-primary" />
       <span className="text-foreground/90">{children}</span>
     </div>
   );
