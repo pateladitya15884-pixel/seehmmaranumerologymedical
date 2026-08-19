@@ -61,8 +61,8 @@ function Index() {
   return (
     <div className="min-h-screen bg-background font-sans selection:bg-secondary/30">
       {/* Disclaimer Bar */}
-      <div className="bg-primary py-2.5 text-center text-[10px] font-black uppercase tracking-[0.2em] text-primary-foreground sm:text-xs">
-        ⚠️ THIS IS A FULL ADVANCED COURSE — NOT A FREE WEBINAR
+      <div className="bg-primary py-2.5 text-center text-[10px] font-black uppercase tracking-[0.3em] text-primary-foreground sm:text-xs">
+        <span className="opacity-80">⚠️ THIS IS A FULL ADVANCED COURSE — NOT A FREE WEBINAR</span>
       </div>
 
       {/* Header */}
@@ -70,7 +70,7 @@ function Index() {
         <div className="container mx-auto flex items-center justify-between px-4 py-3 sm:py-4">
           <div className="flex items-center gap-2 sm:gap-3">
             <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-10 w-10 object-contain bg-white rounded-full p-1 shadow-sm sm:h-12 sm:w-12" />
-            <span className="text-xl font-black tracking-tighter text-primary sm:text-2xl">SEEHMMARA NUMEROLOGY</span>
+            <span className="text-xl font-black tracking-tighter text-primary sm:text-2xl drop-shadow-sm">SEEHMMARA NUMEROLOGY</span>
           </div>
           <nav className="hidden items-center gap-6 lg:flex xl:gap-8">
             {["Home", "About", "Curriculum", "FAQ"].map((item) => (
@@ -100,9 +100,13 @@ function Index() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-8 pb-16 md:pt-24 md:pb-32" id="home">
+      <section className="relative overflow-hidden pt-12 pb-20 md:pt-28 md:pb-36 bg-linear-to-b from-background via-background/50 to-muted/30" id="home">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none overflow-hidden">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-3xl opacity-50 translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl opacity-50 -translate-x-1/2 translate-y-1/2" />
+        </div>
         <div className="container relative z-10 mx-auto px-4">
-          <div className="flex flex-col items-center gap-8 lg:gap-12 max-w-7xl mx-auto">
+          <div className="flex flex-col items-center gap-10 lg:gap-14 max-w-7xl mx-auto">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -110,8 +114,8 @@ function Index() {
               transition={{ duration: 0.3, ease: "easeOut" }}
               className="flex flex-col space-y-6 text-center"
             >
-              <div className="inline-flex self-center rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-bold text-secondary ring-1 ring-inset ring-secondary/20 sm:text-sm">
-                A Complete Advanced Course • 100% FREE
+              <div className="inline-flex self-center rounded-full bg-secondary/15 px-5 py-2 text-xs font-black text-primary border border-secondary/30 shadow-sm sm:text-sm tracking-wide">
+                ✨ COMPLETE ADVANCED COURSE • 100% FREE
               </div>
               <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl lg:text-7xl">
                 Medical Astrology <br />
@@ -161,18 +165,18 @@ function Index() {
               </div>
 
               {/* Countdown Timer */}
-              <div className="flex flex-col items-center gap-4 rounded-2xl bg-card p-4 shadow-xl shadow-primary/5 ring-1 ring-primary/5 sm:p-6 mx-auto">
-                <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground sm:text-sm">Registration Closes In</p>
-                <div className="flex gap-4 sm:gap-8">
+              <div className="flex flex-col items-center gap-6 rounded-3xl bg-card p-6 shadow-2xl shadow-primary/5 border border-primary/5 sm:p-8 mx-auto max-w-md w-full">
+                <p className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground/80 sm:text-sm">Registration Closes In</p>
+                <div className="flex justify-center gap-6 sm:gap-10">
                   {[
                     { label: "Days", value: timeLeft.days },
                     { label: "Hours", value: timeLeft.hours },
                     { label: "Mins", value: timeLeft.minutes },
                     { label: "Secs", value: timeLeft.seconds },
                   ].map((unit) => (
-                    <div key={unit.label} className="text-center">
-                      <span className="text-2xl font-black text-primary sm:text-3xl md:text-4xl">{String(unit.value).padStart(2, '0')}</span>
-                      <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">{unit.label}</p>
+                    <div key={unit.label} className="text-center min-w-[60px]">
+                      <span className="text-3xl font-black text-primary sm:text-4xl tabular-nums drop-shadow-sm">{String(unit.value).padStart(2, '0')}</span>
+                      <p className="mt-1 text-[10px] font-extrabold uppercase tracking-widest text-secondary">{unit.label}</p>
                     </div>
                   ))}
                 </div>
@@ -189,8 +193,9 @@ function Index() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "0px" }}
         transition={{ duration: 0.3, ease: "easeOut" }}
-        className="bg-primary py-10 text-primary-foreground sm:py-12"
+        className="bg-primary py-14 text-primary-foreground sm:py-16 relative overflow-hidden"
       >
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--color-secondary)_0%,_transparent_70%)]" />
         <div className="container mx-auto grid grid-cols-2 gap-y-10 gap-x-4 px-4 text-center md:grid-cols-4">
           {[
             { label: "Live Classes", value: "20+" },
@@ -217,12 +222,12 @@ function Index() {
             className="mx-auto max-w-7xl space-y-12"
           >
             <div className="text-center space-y-4">
-              <h2 className="text-4xl font-black text-primary sm:text-5xl md:text-6xl">Why This Course?</h2>
-              <p className="text-base text-muted-foreground italic sm:text-lg">"Complete Course — No hidden upsells, no sales pitch during class"</p>
+              <h2 className="text-4xl font-black text-primary sm:text-5xl md:text-6xl tracking-tight">Why This Course?</h2>
+              <p className="text-base text-muted-foreground italic sm:text-xl max-w-2xl mx-auto font-medium">"Complete Course — No hidden upsells, no sales pitch during class"</p>
             </div>
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              <div className="flex flex-col space-y-4 rounded-2xl bg-card p-6 shadow-sm ring-1 ring-primary/5 sm:p-8">
+              <div className="flex flex-col space-y-4 rounded-3xl bg-card p-8 shadow-xl shadow-primary/5 border border-primary/5 sm:p-10 transition-transform hover:-translate-y-1 duration-300">
                 <h3 className="text-lg font-bold text-primary sm:text-xl">What is Medical Astrology?</h3>
                 <div className="flex-1 space-y-4">
                   <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
@@ -234,7 +239,7 @@ function Index() {
                 </div>
               </div>
 
-              <div className="flex flex-col space-y-4 rounded-2xl bg-card p-6 shadow-sm ring-1 ring-primary/5 border-t-4 border-secondary sm:p-8">
+              <div className="flex flex-col space-y-4 rounded-3xl bg-card p-8 shadow-xl shadow-primary/5 border border-primary/5 border-t-4 border-t-secondary sm:p-10 transition-transform hover:-translate-y-1 duration-300">
                 <h3 className="text-lg font-bold text-primary sm:text-xl">Advanced Level Curriculum</h3>
                 <div className="flex-1 space-y-3">
                   <Feature>Understanding Body Parts & Planets</Feature>
@@ -245,7 +250,7 @@ function Index() {
                 </div>
               </div>
 
-              <div className="flex flex-col space-y-4 rounded-2xl bg-card p-6 shadow-sm ring-1 ring-primary/5 border-l-4 border-secondary sm:p-8">
+              <div className="flex flex-col space-y-4 rounded-3xl bg-card p-8 shadow-xl shadow-primary/5 border border-primary/5 border-l-4 border-l-secondary sm:p-10 transition-transform hover:-translate-y-1 duration-300">
                 <h3 className="text-lg font-bold text-primary sm:text-xl">Instructor: Surrjit</h3>
                 <div className="flex-1 space-y-4">
                   <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
@@ -279,7 +284,7 @@ function Index() {
             transition={{ duration: 0.3, ease: "easeOut" }}
             className="mx-auto max-w-2xl text-center space-y-8"
           >
-            <div className="rounded-3xl bg-card p-8 shadow-2xl shadow-primary/10 ring-1 ring-primary/5 sm:p-12">
+            <div className="rounded-[2.5rem] bg-card p-10 shadow-2xl shadow-primary/10 border border-primary/5 sm:p-16">
               <div className="space-y-6">
                 <div className="space-y-2">
                   <h2 className="text-3xl font-black text-primary sm:text-4xl">Join the Official Group</h2>
@@ -321,7 +326,7 @@ function Index() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "0px" }}
                   transition={{ duration: 0.2, delay: i * 0.05 }}
-                  className="rounded-2xl bg-card p-5 shadow-sm ring-1 ring-primary/5 sm:p-6"
+                  className="rounded-2xl bg-card p-6 shadow-md shadow-primary/5 border border-primary/5 transition-all hover:shadow-lg sm:p-8"
                 >
                   <h3 className="text-base font-bold text-primary sm:text-lg">{faq.q}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{faq.a}</p>
@@ -339,7 +344,7 @@ function Index() {
             <div className="space-y-6">
               <div className="flex items-center gap-3">
                 <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-10 w-10 object-contain bg-white rounded-full p-1 sm:h-12 sm:w-12" />
-                <span className="text-2xl font-black tracking-tighter">SEEHMMARA NUMEROLOGY</span>
+                <span className="text-2xl font-black tracking-tighter text-secondary">SEEHMMARA NUMEROLOGY</span>
               </div>
               <p className="text-sm leading-relaxed opacity-70">
                 Empowering healers and astrologers through authentic, advanced knowledge in Medical Astrology and Numerology.
