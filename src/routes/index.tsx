@@ -66,11 +66,11 @@ function Index() {
       </div>
 
       {/* Header */}
-      <header className="sticky top-0 z-40 border-b bg-card/80 backdrop-blur-md transition-all duration-300">
+      <header className="sticky top-0 z-40 border-b border-white/5 bg-background/60 backdrop-blur-xl transition-all duration-300">
         <div className="container mx-auto flex items-center justify-between px-4 py-3 sm:py-4">
           <div className="flex items-center gap-2 sm:gap-3">
-            <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-10 w-10 object-contain bg-white rounded-full p-1 shadow-sm sm:h-12 sm:w-12" />
-            <span className="text-xl font-black tracking-tighter text-primary sm:text-2xl drop-shadow-sm">SEEHMMARA NUMEROLOGY</span>
+            <img src={logoAsset.url} alt="Seehmmara Numerology" className="h-10 w-10 object-contain bg-white rounded-full p-1 shadow-lg sm:h-12 sm:w-12" />
+            <span className="text-xl font-black tracking-tighter text-foreground sm:text-2xl drop-shadow-sm">SEEHMMARA NUMEROLOGY</span>
           </div>
           <nav className="hidden items-center gap-6 lg:flex xl:gap-8">
             {["Home", "About", "Curriculum", "FAQ"].map((item) => (
@@ -100,10 +100,11 @@ function Index() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-12 pb-20 md:pt-28 md:pb-36 bg-linear-to-b from-background via-background/50 to-muted/30" id="home">
+      <section className="relative overflow-hidden pt-12 pb-20 md:pt-28 md:pb-36 bg-linear-to-b from-background via-primary/5 to-secondary/5" id="home">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none overflow-hidden">
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-3xl opacity-50 translate-x-1/2 -translate-y-1/2" />
-          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl opacity-50 -translate-x-1/2 translate-y-1/2" />
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl opacity-30 translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-3xl opacity-30 -translate-x-1/2 translate-y-1/2" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[120px] opacity-20" />
         </div>
         <div className="container relative z-10 mx-auto px-4">
           <div className="flex flex-col items-center gap-10 lg:gap-14 max-w-7xl mx-auto">
@@ -117,9 +118,9 @@ function Index() {
               <div className="inline-flex self-center rounded-full bg-secondary/15 px-5 py-2 text-xs font-black text-primary border border-secondary/30 shadow-sm sm:text-sm tracking-wide">
                 ✨ COMPLETE ADVANCED COURSE • 100% FREE
               </div>
-              <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl lg:text-7xl">
+              <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-7xl">
                 Medical Astrology <br />
-                <span className="text-secondary">Advanced Course</span>
+                <span className="text-primary drop-shadow-[0_0_20px_rgba(var(--primary),0.3)]">Advanced Course</span>
               </h1>
               <div className="mx-auto max-w-xl space-y-4">
                 <div className="flex flex-col gap-2 rounded-xl border border-secondary/20 bg-secondary/5 p-4 text-center">
